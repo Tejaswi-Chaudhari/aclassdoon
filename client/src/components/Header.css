@@ -1,0 +1,30 @@
+  .name{
+    text-decoration: none;
+    text-align:left;
+    display: inline;
+    color:#ffffff  !important;
+    padding-left: 20px;
+    font-size: larger;
+  }
+  .navbar {
+    background-color: #3562f5 !important;
+    text-decoration: none;
+    height:80px;
+    font-size:30px;
+  }
+  .components{
+    padding-right:50px;
+    text-align: right;
+    padding-left: 50px;
+  }
+  .link {
+    text-align: right;
+    margin-top: 10px;
+    font-size: large;
+    font-weight: 600;
+    display: inline;
+    float: right;
+    text-decoration: none;
+    color:#ffffff   !important;
+    padding-left: 15px;
+  }
