@@ -1,3 +1,8 @@
+  .nav-logo{
+    width: 50px;
+    height: auto;
+    margin-left: 20px;
+  }
   .navbar .name{
     text-decoration: none;
     text-align:left;

@@ -1,13 +1,15 @@
 import React from 'react';
-import { Navbar, Nav, Container } from 'react-bootstrap';
+import { Navbar, Nav, Container, Image } from 'react-bootstrap';
 import { LinkContainer } from "react-router-bootstrap";
 import "./Header.css"
+import img from "../media/logo.jpg"
 
 function Header() {
     return (
         <div>
             <>
                 <Navbar className="navbar">
+                <Image src={img} alt="brand-logo" className="nav-logo"/>
                     <LinkContainer to="/">
                         <Navbar.Brand className="name">Class Doon</Navbar.Brand>
                     </LinkContainer>

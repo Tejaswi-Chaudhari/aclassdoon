@@ -20,7 +20,7 @@ const Cards = () => {
     return (
         <div className='card-start'>
             <Container>
-                <Row>
+                <Row lg={3}>
                 {cards.map((item) =>
                     <Card key={item.id} card={item} />
                 )}

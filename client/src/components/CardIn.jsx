@@ -5,10 +5,10 @@ import './CardIn.css'
 const CardIn = ({ card }) => {
     return (
         <div>
-            <Col lg={4}>
+            <Col lg={12}>
                 <Card className="card">
                     <Card.Img className="card-img" variant="top" src={`http://127.0.0.1:8000${card.thumbnail}`} />
-                    <Card.Header as="h5">{card.business_name}</Card.Header>
+                    <Card.Header as="h5" className="card-h">{card.business_name}</Card.Header>
                     <Card.Body>
                         <Card.Title as="h6">Category: {card.category}</Card.Title>
                         <Card.Text>
