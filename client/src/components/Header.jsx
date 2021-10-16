@@ -17,10 +17,10 @@ function Header() {
                     <Navbar.Collapse id="basic-navbar-nav">
                         <Container>
                             <Nav className="components">
-                                <LinkContainer to="/About">
+                                <LinkContainer to="/about">
                                     <Nav.Link className="link a1">About Us</Nav.Link>
                                 </LinkContainer>
-                                <LinkContainer to="/Contact">
+                                <LinkContainer to="/contact">
                                     <Nav.Link className="link">Contact Us</Nav.Link>
                                 </LinkContainer>
                             </Nav>

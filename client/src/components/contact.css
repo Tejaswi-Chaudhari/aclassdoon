@@ -1,0 +1,14 @@
+.title{
+    text-align: center;
+    font-size: 25px;
+    color: #3562f5;
+}
+
+.form{
+    padding: 40px;
+}
+
+.fields{
+    padding-left: 90px;
+    padding-right: 90px;
+}
