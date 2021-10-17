@@ -1,5 +1,5 @@
 import React from 'react';
-import { Navbar, Nav, Container, Image } from 'react-bootstrap';
+import { Navbar, Nav, Container, Image, Form, FormControl, Button} from 'react-bootstrap';
 import { LinkContainer } from "react-router-bootstrap";
 import "./Header.css"
 import img from "../media/logo.jpg"
@@ -16,6 +16,14 @@ function Header() {
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
                     <Navbar.Collapse id="basic-navbar-nav">
                         <Container>
+
+                        <Form className="d-flex">
+                            <FormControl type="search" placeholder="Search" className="Searchbar" aria-label="Search"/>
+                            <div className="button">
+                            <Button variant="outline-success">Search</Button>
+                            </div>
+                            </Form>
+
                             <Nav className="components">
                                 <LinkContainer to="/about">
                                     <Nav.Link className="link a1">About Us</Nav.Link>
