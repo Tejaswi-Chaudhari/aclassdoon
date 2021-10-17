@@ -19,5 +19,14 @@ class Ad(models.Model):
     def __str__(self) -> str:
         return self.business_name
 
+class Contact(models.Model):
+    name=models.CharField(max_length=500)
+    emailid=models.EmailField(max_length=200)
+    phone_no=models.BigIntegerField()
+ 
+    def __str__(self) -> str:
+        return self.name
+
+
 
 
