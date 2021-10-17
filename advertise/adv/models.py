@@ -6,12 +6,15 @@ class Ad(models.Model):
     category = models.CharField(max_length=200)
     services = models.TextField()
     contact_no = models.BigIntegerField()
-    email = models.EmailField(max_length=200, default='')
+    email = models.EmailField(max_length=200, default='', blank=True, null=True)
     thumbnail = models.ImageField(upload_to='assets', default='')
     img1 = models.ImageField(upload_to='assets', blank=True, null=True)
     img2 = models.ImageField(upload_to='assets', blank=True, null=True)
     img3 = models.ImageField(upload_to='assets', blank=True, null=True)
     priority = models.IntegerField(default=0)
+    address = models.TextField(default='', blank=True, null=True)
+    owner_name = models.CharField(max_length=200, default='', blank=True, null=True)
+    website = models.URLField(default='', blank=True, null=True)
 
     def __str__(self) -> str:
         return self.business_name

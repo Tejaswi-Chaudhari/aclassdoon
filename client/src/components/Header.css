@@ -25,16 +25,11 @@
     padding-left: 15x; 
   }
   .navbar .components .a1{
-    margin-bottom: 20px;
-    margin-left: 700px;
+    margin-left: 200px;
   }
 
-  .Searchbar{
-    margin-top: 50px;
-    width: 500px;
-  }
-
-  .button{
-    height:40px;
-    margin-top: 42px;
+  .searchbar{
+    width: 300px;
+    margin-top: 8px;
+    margin-left: 200px;
   }
