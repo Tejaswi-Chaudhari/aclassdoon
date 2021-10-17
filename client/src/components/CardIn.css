@@ -6,3 +6,22 @@
 .card-h{
     color: #3562f5;
 }
+.button-card{
+    background-color: transparent;
+    border: none;
+}
+.button-card:hover{
+    background-color: transparent;
+    border: none;
+}
+.button-card:visited{
+    background-color: transparent;
+    border: none;
+}
+.button-card:active{
+    background-color: transparent;
+    border: none;
+}
+.footer-txt{
+    text-align: center;
+}
