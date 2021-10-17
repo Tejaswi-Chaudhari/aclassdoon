@@ -11,12 +11,12 @@ const Contact = () => {
                 <div className="fields">
                     <Form.Group className="mb-3" controlId="formBasicPassword">
                         <Form.Label className="field-label">Name</Form.Label>
-                        <Form.Control className="field-form" type="text" placeholder="Enter Full Name" />
+                        <Form.Control className="field-form" type="text" placeholder="Enter Full Name" required />
                     </Form.Group>
 
                     <Form.Group className="mb-3" controlId="formBasicEmail">
                         <Form.Label className="field-label">Email address</Form.Label>
-                        <Form.Control className="field-form" type="email" placeholder="Enter email" />
+                        <Form.Control className="field-form" type="email" placeholder="Enter email" required />
                         <Form.Text className="text-muted">
                             We'll never share your email with anyone else.
                         </Form.Text>
@@ -24,7 +24,7 @@ const Contact = () => {
 
                     <Form.Group className="mb-3" controlId="formBasicPhoneno">
                         <Form.Label className="field-label">Phone No</Form.Label>
-                        <Form.Control className="field-form" type="phoneno" placeholder="Phone No." />
+                        <Form.Control className="field-form" type="number" placeholder="Phone No." required />
                     </Form.Group>
                 </div>
                 <center><Button type="submit" className="btn" size="lg" block>

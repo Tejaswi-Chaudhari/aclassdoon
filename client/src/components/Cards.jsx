@@ -2,7 +2,7 @@ import { React, useEffect, useState } from 'react';
 import axios from 'axios';
 import Card from './CardIn';
 import Pagination from './Pagination'
-import { Container, Row } from 'react-bootstrap';
+import { Container, Row, Nav, NavDropdown } from 'react-bootstrap';
 import './Cards.css'
 
 const Cards = () => {
@@ -26,17 +26,27 @@ const Cards = () => {
     const currentCards = cards.slice(indexOfFirstCard, indexOfLastCard);
 
     const paginate = pageNumber => setCurrentPage(pageNumber);
+    const uniqueArr = [... new Set(cards.map(data => data.category))]
 
     return (
-        <div className='card-start'>
-            <Container>
-                <Row lg={3}>
-                {currentCards.map((item) =>
-                    <Card key={item.id} card={item} />
-                )}
-                </Row>
-            </Container>
-            <Pagination cardsPerPage={cardsPerPage} totalCards={cards.length}  paginate={paginate}/>
+        <div>
+            <div className='card-start'>
+                <Container>
+                    <Nav>
+                        <NavDropdown title="Filter by Category" id="basic-nav-dropdown">
+                            {uniqueArr.map((item =>
+                                <NavDropdown.Item>{item}</NavDropdown.Item>
+                            ))}
+                        </NavDropdown>
+                    </Nav>
+                    <Row lg={3}>
+                        {currentCards.map((item) =>
+                            <Card key={item.id} card={item} />
+                        )}
+                    </Row>
+                </Container>
+                <Pagination cardsPerPage={cardsPerPage} totalCards={cards.length} paginate={paginate} />
+            </div>
         </div>
     )
 }
