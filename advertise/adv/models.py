@@ -8,6 +8,10 @@ class Ad(models.Model):
     contact_no = models.BigIntegerField()
     email = models.EmailField(max_length=200, default='')
     thumbnail = models.ImageField(upload_to='assets', default='')
+    img1 = models.ImageField(upload_to='assets', blank=True, null=True)
+    img2 = models.ImageField(upload_to='assets', blank=True, null=True)
+    img3 = models.ImageField(upload_to='assets', blank=True, null=True)
+    priority = models.IntegerField(default=0)
 
     def __str__(self) -> str:
         return self.business_name

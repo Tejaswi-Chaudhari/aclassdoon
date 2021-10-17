@@ -1,7 +1,17 @@
 .title{
     text-align: center;
-    font-size: 25px;
-    color: #3562f5;
+    font-size: 28px;
+    color: #ffffff;
+}
+
+.contact-container{
+    margin-top: 30px;
+    background: linear-gradient(#93a7e9, #fffff1);
+    padding-top: 50px;
+    border-radius: 20px;
+}
+.field-form{
+    border-color: #3562f5;
 }
 
 .form{
