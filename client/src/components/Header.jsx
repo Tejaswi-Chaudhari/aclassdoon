@@ -1,6 +1,8 @@
 import React from 'react';
 import { Navbar, Nav, Container, Image, Form, FormControl, Button, Row, Col } from 'react-bootstrap';
 import { LinkContainer } from "react-router-bootstrap";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import {faAddressCard, faUsers } from '@fortawesome/free-solid-svg-icons'
 import "./Header.css"
 import img from "../media/logo.jpg"
 
@@ -29,10 +31,10 @@ function Header() {
                                     </Row>
                                 </Form>
                                 <LinkContainer to="/about">
-                                    <Nav.Link className="link a1">About Us</Nav.Link>
+                                    <Nav.Link className="link a1"><FontAwesomeIcon icon={faUsers} />  About Us</Nav.Link>
                                 </LinkContainer>
                                 <LinkContainer to="/contact">
-                                    <Nav.Link className="link">Contact Us</Nav.Link>
+                                    <Nav.Link className="link"> <FontAwesomeIcon icon={faAddressCard} />  Contact Us</Nav.Link>
                                 </LinkContainer>
                             </Nav>
                         </Container>
