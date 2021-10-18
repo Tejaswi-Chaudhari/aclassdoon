@@ -5,5 +5,5 @@ admin.site.register(Ad)
 admin.site.register(Contact)
 
 admin.site.site_header  =  "A Class Doon"  
-admin.site.site_title  =  "Admin Panel"
+admin.site.site_title  =  "A Class Doon"
 admin.site.index_title  =  "Admin Panel"

@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Italianno&display=swap');
   .nav-logo{
     width: 50px;
     height: auto;
@@ -8,8 +9,9 @@
     text-align:left;
     color:#ffffff;
     padding-left: 20px;
-    font-size: 20px;
-    font-weight: 600;
+    font-weight: 50px;
+    font-size: 40px;
+    font-family: 'Italianno', cursive;
   }
   .navbar {
     background-color: #3562f5;

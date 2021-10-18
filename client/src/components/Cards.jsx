@@ -4,6 +4,8 @@ import Card from './CardIn';
 import Pagination from './Pagination'
 import { Container, Row, Nav, NavDropdown, Form, FormControl, Col, Button } from 'react-bootstrap';
 import './Cards.css'
+import banner from '../media/acdbanner.jpg'
+import { Image } from 'react-bootstrap';
 
 const Cards = () => {
 
@@ -56,6 +58,9 @@ const Cards = () => {
                         </Form>
                     </Nav>
                     <br></br>
+                    <center>
+                         <Image src={banner} alt="banner" className="about-banner" />
+                    </center>
                     <Row lg={3}>
                         {currentCards.map((item) =>
                             <Card key={item.id} card={item} />
