@@ -2,7 +2,7 @@
   .nav-logo{
     width: 50px;
     height: auto;
-    margin-left: 20px;
+    margin-left: 120px;
   }
   .navbar .name{
     text-decoration: none;
@@ -27,11 +27,5 @@
     padding-left: 15x; 
   }
   .navbar .components .a1{
-    margin-left: 200px;
-  }
-
-  .searchbar{
-    width: 300px;
-    margin-top: 8px;
-    margin-left: 200px;
+    margin-left: 650px;
   }
