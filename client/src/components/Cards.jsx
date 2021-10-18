@@ -2,7 +2,7 @@ import { React, useEffect, useState } from 'react';
 import axios from 'axios';
 import Card from './CardIn';
 import Pagination from './Pagination'
-import { Container, Row, Nav, NavDropdown } from 'react-bootstrap';
+import { Container, Row, Nav, NavDropdown, Form, FormControl, Col, Button } from 'react-bootstrap';
 import './Cards.css'
 
 const Cards = () => {
@@ -26,7 +26,17 @@ const Cards = () => {
     const currentCards = cards.slice(indexOfFirstCard, indexOfLastCard);
 
     const paginate = pageNumber => setCurrentPage(pageNumber);
-    const uniqueArr = [... new Set(cards.map(data => data.category))]
+    const uniqueArr = [...new Set(cards.map(data => data.category))]
+
+    const filterData = ({ item }) => {
+        const filteredData = [];
+        cards.map((i) => {
+            if (item === i.category) {
+                filteredData.push(i)
+            }
+        })
+        console.log(filteredData)
+    }
 
     return (
         <div>
@@ -35,10 +45,21 @@ const Cards = () => {
                     <Nav>
                         <NavDropdown title="Filter by Category" id="basic-nav-dropdown">
                             {uniqueArr.map((item =>
-                                <NavDropdown.Item>{item}</NavDropdown.Item>
+                                <NavDropdown.Item onClick={filterData({ item })}>{item}</NavDropdown.Item>
                             ))}
                         </NavDropdown>
+                        <Form>
+                            <Row>
+                                <Col>
+                                    <FormControl type="search" placeholder="Search" className="searchbar" aria-label="Search" />
+                                </Col>
+                                <Col>
+                                    <Button variant="primary">Search</Button>
+                                </Col>
+                            </Row>
+                        </Form>
                     </Nav>
+                    <br></br>
                     <Row lg={3}>
                         {currentCards.map((item) =>
                             <Card key={item.id} card={item} />

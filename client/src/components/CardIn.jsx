@@ -1,5 +1,5 @@
 import { React, useState } from 'react';
-import { Card, Col, Carousel, Button, Modal } from 'react-bootstrap';
+import { Card, Col, Carousel, Button, Modal, Container } from 'react-bootstrap';
 import './CardIn.css'
 
 const CardIn = ({ card }) => {
@@ -21,21 +21,21 @@ const CardIn = ({ card }) => {
                                 alt="First slide"
                             />
                         </Carousel.Item>
-                        <Carousel.Item style={{ display: card.img1 ? "" : "none" }}>
+                        <Carousel.Item>
                             <img
                                 className="card-img"
                                 src={`http://127.0.0.1:8000${card.img1}`}
                                 alt="Second slide"
                             />
                         </Carousel.Item>
-                        <Carousel.Item style={{ display: card.img2 ? "" : "none" }}>
+                        <Carousel.Item>
                             <img
                                 className="card-img"
                                 src={`http://127.0.0.1:8000${card.img2}`}
                                 alt="Third slide"
                             />
                         </Carousel.Item>
-                        <Carousel.Item style={{ display: card.img3 ? "" : "none" }}>
+                        <Carousel.Item>
                             <img
                                 className="card-img"
                                 src={`http://127.0.0.1:8000${card.img3}`}
@@ -57,15 +57,49 @@ const CardIn = ({ card }) => {
                 keyboard={false}
                 aria-labelledby="contained-modal-title-vcenter"
             >
-                <Modal.Header closeButton>
+                <Modal.Header className="modal-h">
                     <Modal.Title id="contained-modal-title-vcenter">{card.business_name}</Modal.Title>
                 </Modal.Header>
+                <center>
+                    <Carousel variant="dark" className="carousel-dark" fade nextLabel="Next" prevLabel="Previous">
+                        <Carousel.Item>
+                            <img
+                                className="cardimg"
+                                src={`http://127.0.0.1:8000${card.thumbnail}`}
+                                alt="First slide"
+                            />
+                        </Carousel.Item>
+                        <Carousel.Item>
+                            <img
+                                className="cardimg"
+                                src={`http://127.0.0.1:8000${card.img1}`}
+                                alt="Second slide"
+                            />
+                        </Carousel.Item>
+                        <Carousel.Item>
+                            <img
+                                className="cardimg"
+                                src={`http://127.0.0.1:8000${card.img2}`}
+                                alt="Third slide"
+                            />
+                        </Carousel.Item>
+                        <Carousel.Item>
+                            <img
+                                className="cardimg"
+                                src={`http://127.0.0.1:8000${card.img3}`}
+                                alt="Fourth slide"
+                            />
+                        </Carousel.Item>
+                    </Carousel>
+                </center>
+                <Container>
                 <Modal.Body>
                     <h6>Category: {card.category}</h6>
                     <h6>{card.description}</h6>
                     <p>Services Offered: {card.services}</p><br></br>
-                    <p className="text-muted footer-txt">Contact Number: {card.contact_no}<br></br>Email ID: {card.email}<br></br>{card.website? card.website : ''}<br></br> {card.address? `Address: ${card.address}` : ''}<br></br>{card.owner_name? `--${card.owner_name}` : ''}<br></br></p>
+                    <p className="text-muted footer-txt">Contact Number: {card.contact_no}<br></br>Email ID: {card.email}<br></br>{card.website ? card.website : ''}<br></br> {card.address ? `Address: ${card.address}` : ''}<br></br>{card.owner_name ? `--${card.owner_name}` : ''}<br></br></p>
                 </Modal.Body>
+                </Container>
                 <Button variant="primary" onClick={handleClose}>
                     Close
                 </Button>

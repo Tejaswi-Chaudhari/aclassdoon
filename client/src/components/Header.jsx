@@ -1,5 +1,5 @@
 import React from 'react';
-import { Navbar, Nav, Container, Image, Form, FormControl, Button, Row, Col } from 'react-bootstrap';
+import { Navbar, Nav, Container, Image } from 'react-bootstrap';
 import { LinkContainer } from "react-router-bootstrap";
 import "./Header.css"
 import img from "../media/logo.jpg"
@@ -18,16 +18,6 @@ function Header() {
                         <Container>
 
                             <Nav className="components">
-                                <Form>
-                                    <Row>
-                                        <Col>
-                                            <FormControl type="search" placeholder="Search" className="searchbar" aria-label="Search" />
-                                        </Col>
-                                        <Col>
-                                            <Button variant="dark">Search</Button>
-                                        </Col>
-                                    </Row>
-                                </Form>
                                 <LinkContainer to="/about">
                                     <Nav.Link className="link a1">About Us</Nav.Link>
                                 </LinkContainer>

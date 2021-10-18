@@ -25,3 +25,11 @@
 .footer-txt{
     text-align: center;
 }
+.cardimg{
+    height: 300px;
+    width: auto;
+}
+.modal-h{
+    background-color: #3562f5;
+    color: #ffffff;
+}
