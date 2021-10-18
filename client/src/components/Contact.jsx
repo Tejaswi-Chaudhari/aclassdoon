@@ -18,7 +18,7 @@ const Contact = () => {
 
     const onSubmit = async (e) => {
         e.preventDefault();
-        await axios.post("http://127.0.0.1:8000/api/contact", user);
+        await axios.post("http://127.0.0.1:8000/api/contact/", user);
         setUser({
             name: '',
             emailid:'',
