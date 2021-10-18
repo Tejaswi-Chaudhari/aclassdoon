@@ -30,26 +30,31 @@ const Cards = () => {
     const paginate = pageNumber => setCurrentPage(pageNumber);
     const uniqueArr = [...new Set(cards.map(data => data.category))];
 
-    const filterData = ({item}) => {
-        let filteredData = cards.filter(i => i.category===item)
+    const filterData = ({ item }) => {
+        let filteredData = cards.filter(i => i.category === item)
         setCards(filteredData)
     }
     return (
         <div>
             <div className='card-start'>
                 <Container>
+                    <center>
+                        <Image src={banner} alt="banner" className="about-banner" />
+                    </center>
+                    <hr></hr>
+                    <br></br>
                     <Nav>
                         <NavDropdown title="Filter by Category" id="basic-nav-dropdown">
                             {uniqueArr.map((item =>
-                                <NavDropdown.Item><Button onClick={() => filterData({item})} variant="light">{item}</Button></NavDropdown.Item>
+                                <NavDropdown.Item><Button onClick={() => filterData({ item })} variant="light">{item}</Button></NavDropdown.Item>
                             ))}
                         </NavDropdown>
                         <Form>
                             <Row>
                                 <Col>
-                                    <FormControl 
-                                    type="search" placeholder="Search" className="searchbar" 
-                                    aria-label="Search" />
+                                    <FormControl
+                                        type="search" placeholder="Search" className="searchbar"
+                                        aria-label="Search" />
                                 </Col>
                                 <Col>
                                     <Button variant="primary">Search</Button>
@@ -58,9 +63,6 @@ const Cards = () => {
                         </Form>
                     </Nav>
                     <br></br>
-                    <center>
-                         <Image src={banner} alt="banner" className="about-banner" />
-                    </center>
                     <Row lg={3}>
                         {currentCards.map((item) =>
                             <Card key={item.id} card={item} />
