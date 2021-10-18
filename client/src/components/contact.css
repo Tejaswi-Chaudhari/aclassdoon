@@ -6,9 +6,10 @@
 
 .contact-container{
     margin-top: 30px;
-    background: linear-gradient(#6282ec, #eeeece);
+    background: linear-gradient(#3eadcf, #cef5e4);
     padding-top: 50px;
     border-radius: 20px;
+    padding-bottom: 20px;
 }
 .field-form{
     border-color: #3562f5;
