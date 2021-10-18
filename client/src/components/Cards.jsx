@@ -26,18 +26,12 @@ const Cards = () => {
     const currentCards = cards.slice(indexOfFirstCard, indexOfLastCard);
 
     const paginate = pageNumber => setCurrentPage(pageNumber);
-    const uniqueArr = [...new Set(cards.map(data => data.category))]
+    const uniqueArr = [...new Set(cards.map(data => data.category))];
 
-    const filterData = ({ item }) => {
-        const filteredData = [];
-        cards.map((i) => {
-            if (item === i.category) {
-                filteredData.push(i)
-            }
-        })
-        console.log(filteredData)
+    const filterData = ({item}) => {
+        let filteredData = cards.filter(i => i.category===item)
+        setCards(filteredData)
     }
-
     return (
         <div>
             <div className='card-start'>
@@ -45,13 +39,15 @@ const Cards = () => {
                     <Nav>
                         <NavDropdown title="Filter by Category" id="basic-nav-dropdown">
                             {uniqueArr.map((item =>
-                                <NavDropdown.Item onClick={filterData({ item })}>{item}</NavDropdown.Item>
+                                <NavDropdown.Item><Button onClick={() => filterData({item})} variant="light">{item}</Button></NavDropdown.Item>
                             ))}
                         </NavDropdown>
                         <Form>
                             <Row>
                                 <Col>
-                                    <FormControl type="search" placeholder="Search" className="searchbar" aria-label="Search" />
+                                    <FormControl 
+                                    type="search" placeholder="Search" className="searchbar" 
+                                    aria-label="Search" />
                                 </Col>
                                 <Col>
                                     <Button variant="primary">Search</Button>
