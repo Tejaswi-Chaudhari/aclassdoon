@@ -12,6 +12,21 @@ const Cards = () => {
     const [cards, setCards] = useState([]);
     const [currentPage, setCurrentPage] = useState(1);
     const [cardsPerPage] = useState(9);
+    const [reset, setReset] = useState(false);
+    const [search, setSearch] = useState("");
+
+    const onInputChange = e => {
+        setSearch({search: e.target.value})
+    }
+
+    const onSubmit = async (e) => {
+        console.log(Object.values(search))
+        e.preventDefault();
+        let searchedData = cards.filter(i => i.business_name === Object.values(search))
+        setCards(searchedData)
+        setReset(true)
+        setSearch('')
+    }
 
     useEffect(() => {
         loadCards();
@@ -28,43 +43,49 @@ const Cards = () => {
     const currentCards = cards.slice(indexOfFirstCard, indexOfLastCard);
 
     const paginate = pageNumber => setCurrentPage(pageNumber);
-    const uniqueArr = [...new Set(cards.map(data => data.category))]
+    const uniqueArr = [...new Set(cards.map(data => data.category))];
 
     const filterData = ({ item }) => {
-        const filteredData = [];
-        cards.map((i) => {
-            if (item === i.category) {
-                filteredData.push(i)
-            }
-        })
-        console.log(filteredData)
+        let filteredData = cards.filter(i => i.category === item)
+        setCards(filteredData)
+        setReset(true)
     }
-
     return (
         <div>
             <div className='card-start'>
                 <Container>
+                    <center>
+                        <Image src={banner} alt="banner" className="about-banner" />
+                    </center>
+                    <hr></hr>
+                    <br></br>
                     <Nav>
                         <NavDropdown title="Filter by Category" id="basic-nav-dropdown">
                             {uniqueArr.map((item =>
-                                <NavDropdown.Item onClick={filterData({ item })}>{item}</NavDropdown.Item>
+                                <NavDropdown.Item><Button onClick={() => filterData({ item })} variant="light">{item}</Button></NavDropdown.Item>
                             ))}
                         </NavDropdown>
-                        <Form>
+                        <Button onClick={() => window.location.reload(false)} style={{display: reset? '': 'none'}} variant='primary'>
+                            Reset
+                        </Button>
+                        <Form onSubmit={e => onSubmit(e)}>
                             <Row>
                                 <Col>
-                                    <FormControl type="search" placeholder="Search" className="searchbar" aria-label="Search" />
+                                    <FormControl
+                                        onChange={e => onInputChange(e)}
+                                        defaultvalue={search}
+                                        name="search"
+                                        type="text" placeholder="Search" className="searchbar"
+                                        aria-label="Search"
+                                        />
                                 </Col>
                                 <Col>
-                                    <Button variant="primary">Search</Button>
+                                    <Button type="submit" variant="primary">Search</Button>
                                 </Col>
                             </Row>
                         </Form>
                     </Nav>
                     <br></br>
-                    <center>
-                         <Image src={banner} alt="banner" className="about-banner" />
-                    </center>
                     <Row lg={3}>
                         {currentCards.map((item) =>
                             <Card key={item.id} card={item} />
