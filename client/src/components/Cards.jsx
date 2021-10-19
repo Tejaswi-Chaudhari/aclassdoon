@@ -12,6 +12,21 @@ const Cards = () => {
     const [cards, setCards] = useState([]);
     const [currentPage, setCurrentPage] = useState(1);
     const [cardsPerPage] = useState(9);
+    const [reset, setReset] = useState(false);
+    const [search, setSearch] = useState("");
+
+    const onInputChange = e => {
+        setSearch({search: e.target.value})
+    }
+
+    const onSubmit = async (e) => {
+        console.log(Object.values(search))
+        e.preventDefault();
+        let searchedData = cards.filter(i => i.business_name === Object.values(search))
+        setCards(searchedData)
+        setReset(true)
+        setSearch('')
+    }
 
     useEffect(() => {
         loadCards();
@@ -33,6 +48,7 @@ const Cards = () => {
     const filterData = ({ item }) => {
         let filteredData = cards.filter(i => i.category === item)
         setCards(filteredData)
+        setReset(true)
     }
     return (
         <div>
@@ -49,15 +65,22 @@ const Cards = () => {
                                 <NavDropdown.Item><Button onClick={() => filterData({ item })} variant="light">{item}</Button></NavDropdown.Item>
                             ))}
                         </NavDropdown>
-                        <Form>
+                        <Button onClick={() => window.location.reload(false)} style={{display: reset? '': 'none'}} variant='primary'>
+                            Reset
+                        </Button>
+                        <Form onSubmit={e => onSubmit(e)}>
                             <Row>
                                 <Col>
                                     <FormControl
-                                        type="search" placeholder="Search" className="searchbar"
-                                        aria-label="Search" />
+                                        onChange={e => onInputChange(e)}
+                                        defaultvalue={search}
+                                        name="search"
+                                        type="text" placeholder="Search" className="searchbar"
+                                        aria-label="Search"
+                                        />
                                 </Col>
                                 <Col>
-                                    <Button variant="primary">Search</Button>
+                                    <Button type="submit" variant="primary">Search</Button>
                                 </Col>
                             </Row>
                         </Form>
