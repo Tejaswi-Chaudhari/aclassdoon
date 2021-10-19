@@ -1,5 +1,5 @@
 import { React, useState } from 'react';
-import { Card, Col, Carousel, Button, Modal, Container } from 'react-bootstrap';
+import { Card, Col, Carousel, Button, Modal, Container, Nav} from 'react-bootstrap';
 import './CardIn.css'
 
 const CardIn = ({ card }) => {
@@ -7,6 +7,21 @@ const CardIn = ({ card }) => {
 
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
+
+    const ButtonMailto = ({ mailto, label }) => {
+        return (<>
+            <Nav.Link
+                to='#'
+                onClick={(e) => {
+                    window.location = mailto;
+                    e.preventDefault();
+                }}
+            >
+                {label}
+            </Nav.Link>
+            </>
+        );
+    };
 
     return (
         <div>
@@ -97,7 +112,7 @@ const CardIn = ({ card }) => {
                     <h6>Category: {card.category}</h6>
                     <h6>{card.description}</h6>
                     <p>Services Offered: {card.services}</p><br></br>
-                    <p className="text-muted footer-txt">Contact Number: {card.contact_no}<br></br>Email ID: {card.email}<br></br>{card.website ? card.website : ''}<br></br> {card.address ? `Address: ${card.address}` : ''}<br></br>{card.owner_name ? `--${card.owner_name}` : ''}<br></br></p>
+                    <p className="text-muted footer-txt"><a href={`tel:${card.contact_no}`}>Contact Number: {card.contact_no}</a><ButtonMailto label={`Email: ${card.email}`} mailto={`mailto:${card.email}`} />{card.website ? card.website : ''}<br></br> {card.address ? `Address: ${card.address}` : ''}<br></br>{card.owner_name ? `--${card.owner_name}` : ''}<br></br></p>
                 </Modal.Body>
                 </Container>
                 <Button variant="primary" onClick={handleClose}>

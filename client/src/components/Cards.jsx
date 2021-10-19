@@ -1,6 +1,7 @@
 import { React, useEffect, useState } from 'react';
 import axios from 'axios';
 import Card from './CardIn';
+import Cardx from './Cardx';
 import Pagination from './Pagination'
 import { Container, Row, Nav, NavDropdown, Form, FormControl, Col, Button } from 'react-bootstrap';
 import './Cards.css'
@@ -41,6 +42,9 @@ const Cards = () => {
     const indexOfLastCard = currentPage * cardsPerPage;
     const indexOfFirstCard = indexOfLastCard - cardsPerPage;
     const currentCards = cards.slice(indexOfFirstCard, indexOfLastCard);
+    const cardsp1 = currentCards.filter(i => i.priority === 1);
+    const cardsp2 = currentCards.filter(i => i.priority === 2);
+    const cardsp3 = currentCards.filter(i => i.priority === 3);
 
     const paginate = pageNumber => setCurrentPage(pageNumber);
     const uniqueArr = [...new Set(cards.map(data => data.category))];
@@ -86,8 +90,13 @@ const Cards = () => {
                         </Form>
                     </Nav>
                     <br></br>
+                    <div>
+                        {cardsp1.map((item) =>
+                            <Cardx key={item.id} card={item} />
+                        )}
+                    </div>
                     <Row lg={3}>
-                        {currentCards.map((item) =>
+                        {cardsp3.map((item) =>
                             <Card key={item.id} card={item} />
                         )}
                     </Row>
