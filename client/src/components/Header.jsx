@@ -19,7 +19,6 @@ function Header() {
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
                     <Navbar.Collapse id="basic-navbar-nav">
                         <Container>
-
                             <Nav className="components">
                                 <LinkContainer to="/about">
                                     <Nav.Link className="link a1"><FontAwesomeIcon icon={faUsers} />  About Us</Nav.Link>

@@ -1,25 +1,28 @@
-.title{
-    text-align: center;
-    font-size: 28px;
-    color: #ffffff;
-}
-
-.contact-container{
-    margin-top: 30px;
-    background: linear-gradient(#3eadcf, #cef5e4);
-    padding-top: 50px;
-    border-radius: 20px;
-    padding-bottom: 20px;
-}
-.field-form{
-    border-color: #3562f5;
-}
-
 .form{
-    padding: 40px;
+    padding-top: 30px;
+    padding-right: 100px;
 }
 
-.fields{
-    padding-left: 90px;
-    padding-right: 90px;
+.title{
+    padding-top: 20px;
+}
+
+.box{
+    font-size: 30px;
+    font-weight: bold;
+    list-style-type: none;
+    margin-left: 40px;
+}
+
+.list{
+    padding-top: 20px;
+    border-radius: 25px;
+    background-color: rgb(229, 229, 243);
+    font-size: large;
+    font-weight: 20px;
+    list-style-type: none;
+    padding-left: 40px;
+    margin-left: 40px;
+    width: 350px;
+    height: 150px;
 }

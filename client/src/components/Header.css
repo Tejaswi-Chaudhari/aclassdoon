@@ -20,12 +20,16 @@
     font-size:30px;
   }
   .navbar .components .link {
-    font-size: 16px;
-    font-weight: 500;
+    font-weight: 500px;
     text-decoration: none;
     color:#ffffff;
     padding-left: 15x; 
+    font-size: 20px;
+    padding-right: 50px;
   }
   .navbar .components .a1{
     margin-left: 650px;
+  }
+  .navbar .components .link :hover{
+   color: rgb(255, 255, 255);
   }
