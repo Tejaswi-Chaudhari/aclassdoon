@@ -1,10 +1,10 @@
 import React from 'react'
-import { Card, Nav } from 'react-bootstrap';
+import { Card, Nav, Row, Col } from 'react-bootstrap';
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
-import './Cardx.css'
+import './Cardy.css'
 
-const Cardx = ({ card }) => {
+const Cardy = ({ card }) => {
     const responsive = {
         superLargeDesktop: {
             // the naming can be any, depends on you.
@@ -13,7 +13,7 @@ const Cardx = ({ card }) => {
         },
         desktop: {
             breakpoint: { max: 3000, min: 1024 },
-            items: 3
+            items: 2
         },
         tablet: {
             breakpoint: { max: 1024, min: 464 },
@@ -44,12 +44,16 @@ const Cardx = ({ card }) => {
         <div>
             <Card>
                 <center>
-                    <Carousel responsive={responsive} className="car-1">
-                        <div><img className="car-img" src={`http://127.0.0.1:8000${card.thumbnail}`} alt="slide" /></div>
-                        <div><img className="car-img" src={`http://127.0.0.1:8000${card.img1}`} alt="slide" /></div>
-                        <div><img className="car-img" src={`http://127.0.0.1:8000${card.img2}`} alt="slide" /></div>
-                        <div><img className="car-img" src={`http://127.0.0.1:8000${card.img3}`} alt="slide" /></div>
+                    <Row>
+                    <Col lg={6}>
+                    <Carousel responsive={responsive} className="car-2">
+                        <div><img className="car2-img" src={`http://127.0.0.1:8000${card.thumbnail}`} alt="slide" /></div>
+                        <div><img className="car2-img" src={`http://127.0.0.1:8000${card.img1}`} alt="slide" /></div>
+                        <div><img className="car2-img" src={`http://127.0.0.1:8000${card.img2}`} alt="slide" /></div>
+                        <div><img className="car2-img" src={`http://127.0.0.1:8000${card.img3}`} alt="slide" /></div>
                     </Carousel>
+                    </Col>
+                    <Col lg={6} className="info-card">
                     <Card.Header className="Card-h">
                         <Card.Title>{card.business_name}</Card.Title>
                     </Card.Header>
@@ -59,6 +63,8 @@ const Cardx = ({ card }) => {
                         <p>Services Offered: {card.services}</p><br></br>
                         <p className="text-muted footer-txt"><a href={`tel:${card.contact_no}`}>Contact Number: {card.contact_no}</a><ButtonMailto style={{display: card.email? '': 'none'}} label={`Email: ${card.email}`} mailto={`mailto:${card.email}`} />{card.website ? card.website : ''}<br></br> {card.address ? `Address: ${card.address}` : ''}<br></br>{card.owner_name ? `--${card.owner_name}` : ''}<br></br></p>
                     </Card.Body>
+                    </Col>
+                    </Row>
                 </center>
             </Card>
             <br></br>
@@ -67,4 +73,4 @@ const Cardx = ({ card }) => {
 
 }
 
-export default Cardx
+export default Cardy

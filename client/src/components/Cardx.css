@@ -1,32 +1,10 @@
-/* .multi-item-carousel .carousel-inner .item{
-    transition: 500ms ease-in-out left;
-  }
+.car-img{
+  height: 200px;
+  width: auto;
+}
 
-  .multi-item-carousel .carousel-inner .active .left{
-    left:-33%;
-  }
-
-  .multi-item-carousel .carousel-inner .active .right{
-    left:33%;
-  }
-
-  .multi-item-carousel .carousel-inner .next{
-    left: 33%;
-  }
-
-  .multi-item-carousel .carousel-inner .prev{
-    left: -33%;
-  }
-
-  @media all and (transform-3d), (-webkit-transform-3d) {
-    .multi-item-carousel .carousel-inner .item{
-        transition: 500ms ease-in-out left;
-        transition: 500ms ease-in-out all;
-        backface-visibility: visible;
-        transform: none!important;
-      }
-  }
-
-  .multi-item-carousel .carouse-control .left, .right{
-    background-image: none;
-  } */
+.car-1{
+  width: 800px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}

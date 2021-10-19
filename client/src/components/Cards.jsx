@@ -2,6 +2,7 @@ import { React, useEffect, useState } from 'react';
 import axios from 'axios';
 import Card from './CardIn';
 import Cardx from './Cardx';
+import Cardy from './Cardy'
 import Pagination from './Pagination'
 import { Container, Row, Nav, NavDropdown, Form, FormControl, Col, Button } from 'react-bootstrap';
 import './Cards.css'
@@ -93,6 +94,11 @@ const Cards = () => {
                     <div>
                         {cardsp1.map((item) =>
                             <Cardx key={item.id} card={item} />
+                        )}
+                    </div>
+                    <div>
+                        {cardsp2.map((item) =>
+                            <Cardy key={item.id} card={item} />
                         )}
                     </div>
                     <Row lg={3}>

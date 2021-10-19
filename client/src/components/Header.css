@@ -28,8 +28,19 @@
     padding-right: 50px;
   }
   .navbar .components .a1{
-    margin-left: 650px;
+    margin-left: 600px;
   }
-  .navbar .components .link :hover{
-   color: rgb(255, 255, 255);
+  .navbar .name:hover{
+    color: aquamarine;
   }
+  
+  .navbar .components .link:hover{
+    color: aquamarine;
+  }
+  .navbar .components .link:active{
+    color: aquamarine;
+   }
+  .navbar .components .link:visited{
+    color: aquamarine;
+  }
+  

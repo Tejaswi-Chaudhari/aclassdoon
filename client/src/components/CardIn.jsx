@@ -26,7 +26,7 @@ const CardIn = ({ card }) => {
     return (
         <div>
             <Col lg={12}>
-                <Card className="card">
+                <Card className="card-in">
                     {/* <Card.Img className="card-img" variant="top" src={`http://127.0.0.1:8000${card.thumbnail}`} /> */}
                     <Carousel fade nextLabel="" prevLabel="">
                         <Carousel.Item>
