@@ -1,10 +1,12 @@
 .car-img{
+  height: 350px;
+  width: auto;
+}
+.car-img-modal{
   height: 200px;
   width: auto;
 }
-
 .car-1{
-  width: 800px;
   margin-bottom: 20px;
   margin-top: 20px;
 }

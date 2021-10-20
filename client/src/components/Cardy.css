@@ -1,13 +1,12 @@
 .car2-img{
-    height: 250px;
+    height: 350px;
     width: auto;
-}
-
-.car-2{
-    width: 500px;
-    margin-top: 60px;
 }
 .card{
     border-color: #3562f5;
     border-width: 2px;
 }
+.car2-img-modal{
+    height: 250px;
+    width: auto;
+  }

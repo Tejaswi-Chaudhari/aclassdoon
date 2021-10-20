@@ -15,24 +15,28 @@ const Cards = () => {
     const [currentPage, setCurrentPage] = useState(1);
     const [cardsPerPage] = useState(9);
     const [reset, setReset] = useState(false);
-    const [search, setSearch] = useState("");
-
-    const onInputChange = e => {
-        setSearch({search: e.target.value})
-    }
-
-    const onSubmit = async (e) => {
-        console.log(Object.values(search))
-        e.preventDefault();
-        let searchedData = cards.filter(i => i.business_name === Object.values(search))
-        setCards(searchedData)
-        setReset(true)
-        setSearch('')
-    }
+    const [searchInput, setSearchInput] = useState('');
 
     useEffect(() => {
         loadCards();
     }, []);
+
+
+    const searchItems = (searchValue) => {
+        setSearchInput(searchValue)
+        if (searchInput !== '') {
+            const filteredData = cards.filter((item) => {
+                return Object.values(item).join('').toLowerCase().includes(searchInput.toLowerCase())
+
+            })
+            setCards(filteredData)
+            console.log(filteredData)
+        }
+        else {
+            setCards(cards)
+        }
+        setReset(true)
+    }
 
     const loadCards = async () => {
         const result = await axios.get("http://127.0.0.1:8000/api/ad/");
@@ -70,25 +74,15 @@ const Cards = () => {
                                 <NavDropdown.Item><Button onClick={() => filterData({ item })} variant="light">{item}</Button></NavDropdown.Item>
                             ))}
                         </NavDropdown>
-                        <Button onClick={() => window.location.reload(false)} style={{display: reset? '': 'none'}} variant='primary'>
+
+                        <input type="text"
+                            placeholder='Search...'
+                            onChange={(e) => searchItems(e.target.value)}
+                        />
+
+                        <Button onClick={() => window.location.reload(false)} style={{ display: reset ? '' : 'none' }} variant='primary' className='reset-button'>
                             Reset
                         </Button>
-                        <Form onSubmit={e => onSubmit(e)}>
-                            <Row>
-                                <Col>
-                                    <FormControl
-                                        onChange={e => onInputChange(e)}
-                                        defaultvalue={search}
-                                        name="search"
-                                        type="text" placeholder="Search" className="searchbar"
-                                        aria-label="Search"
-                                        />
-                                </Col>
-                                <Col>
-                                    <Button type="submit" variant="primary">Search</Button>
-                                </Col>
-                            </Row>
-                        </Form>
                     </Nav>
                     <br></br>
                     <div>
@@ -97,9 +91,21 @@ const Cards = () => {
                         )}
                     </div>
                     <div>
-                        {cardsp2.map((item) =>
-                            <Cardy key={item.id} card={item} />
-                        )}
+                        <Row>
+                            <Col lg={8}>
+                                {cardsp2.map((item) =>
+                                    <Cardy key={item.id} card={item} />
+                                )}
+                            </Col>
+                            <Col lg={4}>
+                                {/* {
+                                    for(let i=1; i<=cardsp2.length; i++){
+                                    cardsp3.map((item) =>
+                                        <Card key={item.id} card={item} />
+                                    }
+                                } */}
+                            </Col>
+                        </Row>
                     </div>
                     <Row lg={3}>
                         {cardsp3.map((item) =>
