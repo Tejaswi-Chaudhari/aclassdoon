@@ -29,17 +29,16 @@ const Contact = () => {
     }
     return (
         <div className="title">
-            <center><h1>Contact Form</h1></center>
+            <h1>Contact Form</h1>
             <hr></hr>
         <Row className="form">
         <Col lg={4} md={12} sm={12} xs={12}>
             <div className="box">
-            <ul>Get in Touch</ul>
-            </div>
-            <div className="list">
-           <li>xyz, Mumbai, Maharashtra</li>
-           <li>+9999999999</li>
-           <li>abc@gmail.com</li>
+            <p classname="box-h">Get in Touch</p> 
+            <br></br>
+           <p classname="box-t">xyz, Mumbai, Maharashtra</p>
+           <p classname="box-t">+9999999999</p>
+           <p classname="box-t">abc@gmail.com</p>
            </div>
         </Col>
             <Col lg={8} md={12} sm={12} xs={12}>
