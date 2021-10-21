@@ -114,7 +114,7 @@ const CardIn = ({ card }) => {
                     <h6>Category: {card.category}</h6>
                     <h6>{card.description}</h6>
                     <p>Services Offered: {card.services}</p><br></br>
-                    <p className="text-muted footer-txt"><a href={`tel:${card.contact_no}`}>Contact Number: {card.contact_no}</a><ButtonMailto label={`Email: ${card.email}`} mailto={`mailto:${card.email}`} />{card.website ? card.website : ''}<br></br> {card.address ? `Address: ${card.address}` : ''}<br></br>{card.owner_name ? `--${card.owner_name}` : ''}<br></br></p>
+                    <p className="text-muted footer-txt"><a href={`tel:${card.contact_no}`}>Contact Number: {card.contact_no}</a><ButtonMailto label={`Email: ${card.email}`} mailto={`mailto:${card.email}`} /><a href={card.website ? card.website : ''}>{card.website ? card.website : ''}</a><br></br> {card.address ? `Address: ${card.address}` : ''}<br></br>{card.owner_name ? `--${card.owner_name}` : ''}<br></br></p>
                 </Modal.Body>
                 </Container>
                 <Button variant="primary" onClick={handleClose}>
