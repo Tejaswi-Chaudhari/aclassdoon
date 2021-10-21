@@ -7,25 +7,41 @@
     padding-top: 20px;
 }
 
-.box{
+.form .title .box .box-h{
     font-size: 30px;
-    font-weight: bold;
+    font-size: larger;
     list-style-type: none;
     margin-left: 40px;
 }
 
-.list{
+ .box{
     padding-top: 20px;
     border-radius: 25px;
     background-color: rgb(229, 229, 243);
-    font-size: large;
+    list-style-type: none;
+    padding-left: 40px;
+    margin-left: 40px;
+    width: 350px;
+    height: 200px;
+}
+
+.form .title .box .box-t{
+    font-size: bold;
+    font-weight: 20px;
+}
+/* .list{
+    padding-top: 20px;
+    border-radius: 25px;
+    background-color: rgb(229, 229, 243);
+    font-size: bold;
     font-weight: 20px;
     list-style-type: none;
     padding-left: 40px;
     margin-left: 40px;
     width: 350px;
     height: 150px;
-}
+} */
+
 
 @media screen and (max-width: 767px){
     .box{
