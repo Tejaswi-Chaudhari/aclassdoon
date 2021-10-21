@@ -4,7 +4,7 @@ import Card from './CardIn';
 import Cardx from './Cardx';
 import Cardy from './Cardy'
 import Pagination from './Pagination'
-import { Container, Row, Nav, NavDropdown, Form, FormControl, Col, Button } from 'react-bootstrap';
+import { Container, Row, Nav, NavDropdown, Col, Button } from 'react-bootstrap';
 import './Cards.css'
 import banner from '../media/acdbanner.jpg'
 import { Image } from 'react-bootstrap';
@@ -50,17 +50,26 @@ const Cards = () => {
     const cardsp1 = currentCards.filter(i => i.priority === 1);
     const cardsp2 = currentCards.filter(i => i.priority === 2);
     const cardsp3 = currentCards.filter(i => i.priority === 3);
+    const cardssp2 = cards.filter(i => i.priority === 2);
+    const cardssp3 = cards.filter(i => i.priority === 3);
     const sp31 = [];
     const sp32 = [];
 
-    for(let i=0; i<cardsp2.length; i++){
-        sp31.push(cardsp3[i])
+    if (cardsp3 >= cardsp2) {
+        for (let i = 0; i < cardsp2.length; i++) {
+            sp31.push(cardsp3[i])
+        }
+        for (let i = cardsp2.length; i < cardsp3.length; i++) {
+            sp32.push(cardsp3[i])
+        }
     }
-    for(let i=cardsp2.length; i<cardsp3.length; i++){
-        sp32.push(cardsp3[i])
+    else {
+        for (let i = 0; i < cardsp3.length; i++) {
+            sp31.push(cardsp3[i])
+        }
     }
 
-    console.log(sp31, sp32)
+    console.log(cardssp2, cardssp3)
 
     const paginate = pageNumber => setCurrentPage(pageNumber);
     const uniqueArr = [...new Set(cards.map(data => data.category))];
@@ -102,24 +111,31 @@ const Cards = () => {
                         )}
                     </div>
                     <div>
-                        <Row>
-                            <Col lg={8}>
-                                {cardsp2.map((item) =>
-                                    <Cardy key={item.id} card={item} />
-                                )}
-                            </Col>
-                            <Col lg={4}>
-                                {
-                                    sp31.map((item) =>
-                                        <Card key={item.id} card={item} />
-                                    )} 
-                            </Col>
-                        </Row>
+                        <center>
+                            <Row>
+                                <Col lg={8}>
+                                    {cardsp2.map((item) =>
+                                        <Cardy key={item.id} card={item} />
+                                    )}
+                                </Col>
+                                <Col lg={4}>
+                                    {
+                                        sp31 ?
+                                            sp31.map((item) =>
+                                                <Card key={item.id} card={item} />
+                                            ) : null
+                                    }
+                                </Col>
+                            </Row>
+                        </center>
                     </div>
                     <Row lg={3}>
-                        {sp32.map((item) =>
-                            <Card key={item.id} card={item} />
-                        )}
+                        {
+                            sp32 ?
+                                sp32.map((item) =>
+                                    <Card key={item.id} card={item} />
+                                ) : null
+                        }
                     </Row>
                 </Container>
                 <Pagination cardsPerPage={cardsPerPage} totalCards={cards.length} paginate={paginate} />
