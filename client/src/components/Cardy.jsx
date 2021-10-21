@@ -54,10 +54,10 @@ const Cardy = ({ card }) => {
                     <center>
                     <br></br>
                     <Carousel responsive={responsive}>
-                        <div><img className="car2-img" src={`http://127.0.0.1:8000${card.thumbnail}`} alt="slide" /></div>
-                        <div><img className="car2-img" src={`http://127.0.0.1:8000${card.img1}`} alt="slide" /></div>
-                        <div><img className="car2-img" src={`http://127.0.0.1:8000${card.img2}`} alt="slide" /></div>
-                        <div><img className="car2-img" src={`http://127.0.0.1:8000${card.img3}`} alt="slide" /></div>
+                        <div><img className="car2-img" src={`https://aclassdoon.herokuapp.com${card.thumbnail}`} alt="slide" /></div>
+                        <div><img className="car2-img" src={`https://aclassdoon.herokuapp.com${card.img1}`} alt="slide" /></div>
+                        <div><img className="car2-img" src={`https://aclassdoon.herokuapp.com${card.img2}`} alt="slide" /></div>
+                        <div><img className="car2-img" src={`https://aclassdoon.herokuapp.com${card.img3}`} alt="slide" /></div>
                     </Carousel>
                     </center>
                     <Button onClick={handleShow} className="button-card"><Card.Header as="h5" className="card-h">{card.business_name}</Card.Header></Button>
@@ -79,10 +79,10 @@ const Cardy = ({ card }) => {
                 </Modal.Header>
                 <center>
                     <Carousel responsive={responsive} className="car2-modal">
-                        <div><img className="car2-img-modal" src={`http://127.0.0.1:8000${card.thumbnail}`} alt="slide" /></div>
-                        <div><img className="car2-img-modal" src={`http://127.0.0.1:8000${card.img1}`} alt="slide" /></div>
-                        <div><img className="car2-img-modal" src={`http://127.0.0.1:8000${card.img2}`} alt="slide" /></div>
-                        <div><img className="car2-img-modal" src={`http://127.0.0.1:8000${card.img3}`} alt="slide" /></div>
+                        <div><img className="car2-img-modal" src={`https://aclassdoon.herokuapp.com${card.thumbnail}`} alt="slide" /></div>
+                        <div><img className="car2-img-modal" src={`https://aclassdoon.herokuapp.com${card.img1}`} alt="slide" /></div>
+                        <div><img className="car2-img-modal" src={`https://aclassdoon.herokuapp.com${card.img2}`} alt="slide" /></div>
+                        <div><img className="car2-img-modal" src={`https://aclassdoon.herokuapp.com${card.img3}`} alt="slide" /></div>
                     </Carousel>
                 </center>
                 <Container>
@@ -90,7 +90,7 @@ const Cardy = ({ card }) => {
                         <h6>Category: {card.category}</h6>
                         <h6>{card.description}</h6>
                         <p>Services Offered: {card.services}</p><br></br>
-                        <p className="text-muted footer-txt"><a href={`tel:${card.contact_no}`}>Contact Number: {card.contact_no}</a><ButtonMailto label={`Email: ${card.email}`} mailto={`mailto:${card.email}`} />{card.website ? card.website : ''}<br></br> {card.address ? `Address: ${card.address}` : ''}<br></br>{card.owner_name ? `--${card.owner_name}` : ''}<br></br></p>
+                        <p className="text-muted footer-txt"><a href={`tel:${card.contact_no}`}>Contact Number: {card.contact_no}</a><ButtonMailto label={`Email: ${card.email}`} mailto={`mailto:${card.email}`} /><a href={card.website ? card.website : ''} target="_blank" rel="noreferrer">{card.website ? card.website : ''}</a><br></br> {card.address ? `Address: ${card.address}` : ''}<br></br>{card.owner_name ? `--${card.owner_name}` : ''}<br></br></p>
                     </Modal.Body>
                 </Container>
                 <Button variant="primary" onClick={handleClose}>

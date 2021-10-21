@@ -39,7 +39,7 @@ const Cards = () => {
     }
 
     const loadCards = async () => {
-        const result = await axios.get("http://127.0.0.1:8000/api/ad/");
+        const result = await axios.get("https://aclassdoon.herokuapp.com/api/ad/");
         setCards(result.data);
     }
     console.log(cards)

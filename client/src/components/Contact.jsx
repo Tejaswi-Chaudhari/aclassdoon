@@ -1,14 +1,16 @@
 import React from 'react'
-import {useState } from 'react';
+import { useState } from 'react';
 import axios from 'axios';
-import { Form, Button,Row, Col} from 'react-bootstrap';
+import { Form, Button, Row, Col } from 'react-bootstrap';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import {faEnvelope, faMapMarkerAlt, faPhoneAlt} from '@fortawesome/free-solid-svg-icons'
 
 import "./contact.css"
 
 const Contact = () => {
     const [user, setUser] = useState({
         name: '',
-        emailid:'',
+        emailid: '',
         phone_no: '',
         message: '',
     })
@@ -19,65 +21,65 @@ const Contact = () => {
 
     const onSubmit = async (e) => {
         e.preventDefault();
-        await axios.post("http://127.0.0.1:8000/api/contact/", user);
+        await axios.post("https://aclassdoon.herokuapp.com/api/contact/", user);
         setUser({
             name: '',
-            emailid:'',
+            emailid: '',
             phone_no: '',
             message: '',
         })
     }
     return (
         <div className="title">
-            <h1>Contact Form</h1>
+            <h1 className="contactus">Contact Us</h1>
             <hr></hr>
-        <Row className="form">
-        <Col lg={4} md={12} sm={12} xs={12}>
-            <div className="box">
-            <p classname="box-h">Get in Touch</p> 
-            <br></br>
-           <p classname="box-t">xyz, Mumbai, Maharashtra</p>
-           <p classname="box-t">+9999999999</p>
-           <p classname="box-t">abc@gmail.com</p>
-           </div>
-        </Col>
-            <Col lg={8} md={12} sm={12} xs={12}>
-            <Form onSubmit={e => onSubmit(e)}>
-                 <Row className="mb-3">
-                            <Form.Group as={Col} controlId="formGridname">
-                            <Form.Label>Name</Form.Label>
-                            <Form.Control onChange={e => onInputChange(e)} value={user.name} name="name"
-                            type="name" placeholder="Enter your Full Name" />
+            
+            <Row className="form">
+                <Col lg={4} md={12} sm={12} xs={12}>
+                    <div className="box">
+                        <h3 classname="box-h">Get in Touch</h3>
+                        <br></br>
+                        <p classname="box-t"><FontAwesomeIcon className='icon-contact' icon={faMapMarkerAlt} color="#3562f5"/> xyz, Mumbai, Maharashtra</p>
+                        <p classname="box-t"><FontAwesomeIcon className='icon-contact' icon={faPhoneAlt} color="#3562f5"/> +9999999999</p>
+                        <p classname="box-t"><FontAwesomeIcon className='icon-contact' icon={faEnvelope} color="#3562f5"/> abc@gmail.com</p>
+                    </div>
+                </Col>
+                <Col lg={8} md={12} sm={12} xs={12}>
+                <h2 className="contactform">Contact Form</h2>
+                    <Form onSubmit={e => onSubmit(e)}>
+                        <Row className="mb-3">
+                            <Form.Group as={Col} lg={4} xs={12} sm={12} controlId="formGridname">
+                                <Form.Label>Name</Form.Label>
+                                <Form.Control onChange={e => onInputChange(e)} value={user.name} name="name"
+                                    type="name" placeholder="Enter your Full Name" />
                             </Form.Group>
 
-                            <Form.Group as={Col} controlId="formGridEmail">
-                            <Form.Label>Email</Form.Label>
-                            <Form.Control onChange={e => onInputChange(e)} value={user.emailid} name="emailid"
-                            type="email" placeholder="Enter email" />
+                            <Form.Group as={Col} lg={4} xs={12} sm={12} controlId="formGridEmail">
+                                <Form.Label>Email</Form.Label>
+                                <Form.Control onChange={e => onInputChange(e)} value={user.emailid} name="emailid"
+                                    type="email" placeholder="Enter email" />
                             </Form.Group>
 
-                            <Form.Group as={Col} controlId="formGridPhone_no">
-                            <Form.Label>Phone No</Form.Label>
-                            <Form.Control onChange={e => onInputChange(e)} value={user.phone_no} name="phone_no"
-                            type="phone_no" placeholder="Phone No" />
+                            <Form.Group as={Col} lg={4} xs={12} sm={12} controlId="formGridPhone_no">
+                                <Form.Label>Phone No</Form.Label>
+                                <Form.Control onChange={e => onInputChange(e)} value={user.phone_no} name="phone_no"
+                                    type="phone_no" placeholder="Phone No" />
                             </Form.Group>
                         </Row>
 
                         <Form.Group className="mb-3" controlId="formGridAddress1">
                             <Form.Label>Message</Form.Label>
-                            <Form.Control onChange={e => onInputChange(e)} value={user.message} name="message"
-                            as="textarea" placeholder="Write your message here" />
+                            <Form.Control onChange={e => onInputChange(e)} value={user.message} name="message" rows={3}
+                                as="textarea" placeholder="Write your message here" />
                         </Form.Group>
 
-                        <center>
                         <Button className="button" variant="primary" type="submit">
                             Submit
                         </Button>
-                        </center>
-                        </Form>
-                    </Col>
-                </Row>
-            </div>
+                    </Form>
+                </Col>
+            </Row>
+        </div>
     )
 }
 
