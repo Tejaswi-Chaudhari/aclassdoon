@@ -32,7 +32,7 @@ const Contact = () => {
             <center><h1>Contact Form</h1></center>
             <hr></hr>
         <Row className="form">
-        <Col lg={4}>
+        <Col lg={4} md={12} sm={12} xs={12}>
             <div className="box">
             <ul>Get in Touch</ul>
             </div>
@@ -42,7 +42,7 @@ const Contact = () => {
            <li>abc@gmail.com</li>
            </div>
         </Col>
-            <Col lg={8}>
+            <Col lg={8} md={12} sm={12} xs={12}>
             <Form onSubmit={e => onSubmit(e)}>
                  <Row className="mb-3">
                             <Form.Group as={Col} controlId="formGridname">

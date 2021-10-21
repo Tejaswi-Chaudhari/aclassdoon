@@ -51,6 +51,7 @@ const Cardx = ({ card }) => {
 
             <Col lg={12}>
                 <Card className="car-1">
+                    <br></br>
                     <center>
                     <Carousel responsive={responsive} className="car-1">
                         <div><img className="car-img" src={`http://127.0.0.1:8000${card.thumbnail}`} alt="slide" /></div>

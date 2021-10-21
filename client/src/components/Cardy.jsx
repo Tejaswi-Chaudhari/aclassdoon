@@ -52,7 +52,8 @@ const Cardy = ({ card }) => {
             <Col lg={12}>
                 <Card className="car-1">
                     <center>
-                    <Carousel responsive={responsive} className="car-2">
+                    <br></br>
+                    <Carousel responsive={responsive}>
                         <div><img className="car2-img" src={`http://127.0.0.1:8000${card.thumbnail}`} alt="slide" /></div>
                         <div><img className="car2-img" src={`http://127.0.0.1:8000${card.img1}`} alt="slide" /></div>
                         <div><img className="car2-img" src={`http://127.0.0.1:8000${card.img2}`} alt="slide" /></div>

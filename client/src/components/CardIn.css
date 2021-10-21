@@ -2,6 +2,7 @@
     width: 350px;
     border-color: #3562f5;
     border-width: 2px;
+    margin-bottom: 10px;
 }
 .card-h{
     color: #3562f5;
@@ -32,4 +33,11 @@
 .modal-h{
     background-color: #3562f5;
     color: #ffffff;
+}
+
+@media screen and (max-width: 767px){
+    .card-in{
+        margin-left: auto;
+        margin-right: auto;
+    }
 }

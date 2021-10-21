@@ -1,0 +1,15 @@
+.footer{
+    background-color: #3562f5;
+    color: #ffffff;
+    text-align: center;
+    padding-top: 40px;
+    padding-bottom: 80px;
+}
+.f-link{
+    color: #ffffff;
+    text-decoration: underline;
+}
+.f-link:hover{
+    color: antiquewhite;
+    text-decoration: underline;
+}

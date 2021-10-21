@@ -50,6 +50,17 @@ const Cards = () => {
     const cardsp1 = currentCards.filter(i => i.priority === 1);
     const cardsp2 = currentCards.filter(i => i.priority === 2);
     const cardsp3 = currentCards.filter(i => i.priority === 3);
+    const sp31 = [];
+    const sp32 = [];
+
+    for(let i=0; i<cardsp2.length; i++){
+        sp31.push(cardsp3[i])
+    }
+    for(let i=cardsp2.length; i<cardsp3.length; i++){
+        sp32.push(cardsp3[i])
+    }
+
+    console.log(sp31, sp32)
 
     const paginate = pageNumber => setCurrentPage(pageNumber);
     const uniqueArr = [...new Set(cards.map(data => data.category))];
@@ -98,17 +109,15 @@ const Cards = () => {
                                 )}
                             </Col>
                             <Col lg={4}>
-                                {/* {
-                                    for(let i=1; i<=cardsp2.length; i++){
-                                    cardsp3.map((item) =>
+                                {
+                                    sp31.map((item) =>
                                         <Card key={item.id} card={item} />
-                                    }
-                                } */}
+                                    )} 
                             </Col>
                         </Row>
                     </div>
                     <Row lg={3}>
-                        {cardsp3.map((item) =>
+                        {sp32.map((item) =>
                             <Card key={item.id} card={item} />
                         )}
                     </Row>

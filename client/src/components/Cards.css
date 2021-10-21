@@ -4,3 +4,13 @@
 .reset-button{
     margin-left: 690px;
 }
+
+@media screen and (max-width: 767px){
+    .about-banner{
+        max-width: 300px;
+        margin: auto;
+    }
+    .reset-button{
+        margin-left: 40px;
+    }
+}

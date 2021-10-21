@@ -27,6 +27,7 @@ const CardIn = ({ card }) => {
         <div>
             <Col lg={12}>
                 <Card className="card-in">
+                    <br></br>
                     {/* <Card.Img className="card-img" variant="top" src={`http://127.0.0.1:8000${card.thumbnail}`} /> */}
                     <Carousel fade nextLabel="" prevLabel="">
                         <Carousel.Item>
@@ -61,6 +62,7 @@ const CardIn = ({ card }) => {
                     <Button onClick={handleShow} className="button-card"><Card.Header as="h5" className="card-h">{card.business_name}</Card.Header></Button>
                 </Card>
             </Col>
+            <br></br>
             <br></br>
 
             <Modal

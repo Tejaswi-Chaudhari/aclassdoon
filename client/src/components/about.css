@@ -12,3 +12,11 @@
 .classdoon{
     color: #3562f5;
 }
+
+@media screen and (max-width: 767px){
+    .about{
+        padding-left: 10px;
+        padding-right: 10px;
+        margin: auto;
+    }
+}

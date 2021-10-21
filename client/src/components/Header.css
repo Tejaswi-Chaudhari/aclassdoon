@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Italianno&display=swap');
   .nav-logo{
-    width: 50px;
+    border-radius: 50px;
+    width: 90px;
     height: auto;
     margin-left: 120px;
   }
@@ -23,12 +24,12 @@
     font-weight: 500px;
     text-decoration: none;
     color:#ffffff;
-    padding-left: 15x; 
-    font-size: 20px;
-    padding-right: 50px;
+    padding-left: 15px; 
+    font-size: 18px;
+    padding-right: 25px;
   }
   .navbar .components .a1{
-    margin-left: 600px;
+    margin-left: 550px;
   }
   .navbar .name:hover{
     color: aquamarine;
@@ -44,3 +45,29 @@
     color: aquamarine;
   }
   
+  @media screen and (max-width: 767px){
+    .navbar{
+      height: auto;
+    }
+    .nav-logo{
+      border-radius: 50px;
+      width: 40px;
+      height: auto;
+      margin-left: 20px;
+    }
+    .navbar .name{
+      text-decoration: none;
+      text-align:left;
+      color:#ffffff;
+      padding-left: 10px;
+      font-weight: 50px;
+      font-size: 30px;
+      font-family: 'Italianno', cursive;
+    }
+    .navbar .components .a1{
+      margin: auto;
+    }
+    .navbar .components .link {
+      margin: auto;
+    }
+  }

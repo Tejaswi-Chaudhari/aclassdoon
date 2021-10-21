@@ -3,10 +3,11 @@
     width: auto;
 }
 .card{
-    border-color: #3562f5;
-    border-width: 2px;
+    border-color: #c0c0c0;
+    border-width: 1px;
+    box-shadow: 0.5px 0.5px 8px 8px #c0c0c0;
 }
 .car2-img-modal{
     height: 250px;
     width: auto;
-  }
+}

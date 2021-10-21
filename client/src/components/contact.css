@@ -26,3 +26,18 @@
     width: 350px;
     height: 150px;
 }
+
+@media screen and (max-width: 767px){
+    .box{
+        margin: auto;
+    }
+    .list{
+        margin: auto;
+    }
+    .form{
+        margin-top: 50px;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 0;
+    }
+}
