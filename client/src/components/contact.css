@@ -7,6 +7,15 @@
     padding-top: 20px;
 }
 
+.contactform{
+    padding-top: 20px;
+    margin-left: 500px;
+}
+
+.contactus{
+    padding-left: 40px;
+}
+
 .form .title .box .box-h{
     font-size: 30px;
     font-size: larger;
@@ -15,14 +24,15 @@
 }
 
  .box{
-    padding-top: 20px;
+    padding-top: 20px ;
+    margin-top: 0px;
     border-radius: 25px;
     background-color: rgb(229, 229, 243);
     list-style-type: none;
     padding-left: 40px;
     margin-left: 40px;
     width: 350px;
-    height: 200px;
+    height: 300px;
 }
 
 .form .title .box .box-t{

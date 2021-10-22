@@ -2,6 +2,8 @@ import React from 'react'
 import {useState } from 'react';
 import axios from 'axios';
 import { Form, Button,Row, Col} from 'react-bootstrap';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import {faEnvelope, faMapMarkerAlt, faPhoneAlt} from '@fortawesome/free-solid-svg-icons'
 
 import "./contact.css"
 
@@ -28,17 +30,19 @@ const Contact = () => {
         })
     }
     return (
+
         <div className="title">
-            <h1>Contact Form</h1>
+            <h1 className="contactus">Contact Us</h1>
             <hr></hr>
+            <h2 className="contactform">Contact Form</h2>
         <Row className="form">
         <Col lg={4} md={12} sm={12} xs={12}>
             <div className="box">
-            <p classname="box-h">Get in Touch</p> 
+            <h4 classname="box-h">Get in Touch</h4> 
             <br></br>
-           <p classname="box-t">xyz, Mumbai, Maharashtra</p>
-           <p classname="box-t">+9999999999</p>
-           <p classname="box-t">abc@gmail.com</p>
+           <p classname="box-t"> <FontAwesomeIcon icon={faMapMarkerAlt} /> xyz, Mumbai, Maharashtra</p>
+           <p classname="box-t"> <FontAwesomeIcon icon={faPhoneAlt} />  +9999999999</p>
+           <p classname="box-t"> <FontAwesomeIcon icon={faEnvelope} />  abc@gmail.com</p>
            </div>
         </Col>
             <Col lg={8} md={12} sm={12} xs={12}>
