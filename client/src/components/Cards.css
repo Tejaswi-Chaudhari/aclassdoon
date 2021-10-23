@@ -5,9 +5,14 @@
     margin-left: 690px;
 }
 
+.about-banner{
+    width: 2000px;
+    height: auto;
+}
+
 @media screen and (max-width: 767px){
     .about-banner{
-        max-width: 300px;
+        max-width: 500px;
         margin: auto;
     }
     .reset-button{
