@@ -78,10 +78,12 @@ DEBUG = True
 
 CORS_ALLOWED_ORIGINS = [
     'http://localhost:3000',
+    'https://aclassdoon.netlify.app',
 ]
 
 CSRF_TRUSTED_ORIGINS = [
     'http://localhost:3000',
+    'https://aclassdoon.netlify.app',
 ]
 
 WSGI_APPLICATION = 'advertise.wsgi.application'
@@ -137,6 +139,11 @@ MEDIA_DIR = os.path.join(BASE_DIR,'media')
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
+
+PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
+STATICFILES_DIRS = [
+    os.path.join(PROJECT_ROOT, 'static'),
+]
 
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')

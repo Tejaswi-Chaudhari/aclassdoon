@@ -28,33 +28,33 @@ const CardIn = ({ card }) => {
             <Col lg={12}>
                 <Card className="card-in">
                     <br></br>
-                    {/* <Card.Img className="card-img" variant="top" src={`http://127.0.0.1:8000${card.thumbnail}`} /> */}
+                    {/* <Card.Img className="card-img" variant="top" src={`https://aclassdoon.herokuapp.com${card.thumbnail}`} /> */}
                     <Carousel fade nextLabel="" prevLabel="">
                         <Carousel.Item>
                             <img
                                 className="card-img"
-                                src={`http://127.0.0.1:8000${card.thumbnail}`}
+                                src={`https://aclassdoon.herokuapp.com${card.thumbnail}`}
                                 alt="First slide"
                             />
                         </Carousel.Item>
                         <Carousel.Item>
                             <img
                                 className="card-img"
-                                src={`http://127.0.0.1:8000${card.img1}`}
+                                src={`https://aclassdoon.herokuapp.com${card.img1}`}
                                 alt="Second slide"
                             />
                         </Carousel.Item>
                         <Carousel.Item>
                             <img
                                 className="card-img"
-                                src={`http://127.0.0.1:8000${card.img2}`}
+                                src={`https://aclassdoon.herokuapp.com${card.img2}`}
                                 alt="Third slide"
                             />
                         </Carousel.Item>
                         <Carousel.Item>
                             <img
                                 className="card-img"
-                                src={`http://127.0.0.1:8000${card.img3}`}
+                                src={`https://aclassdoon.herokuapp.com${card.img3}`}
                                 alt="Fourth slide"
                             />
                         </Carousel.Item>
@@ -82,28 +82,28 @@ const CardIn = ({ card }) => {
                         <Carousel.Item>
                             <img
                                 className="cardimg"
-                                src={`http://127.0.0.1:8000${card.thumbnail}`}
+                                src={`https://aclassdoon.herokuapp.com${card.thumbnail}`}
                                 alt="First slide"
                             />
                         </Carousel.Item>
                         <Carousel.Item>
                             <img
                                 className="cardimg"
-                                src={`http://127.0.0.1:8000${card.img1}`}
+                                src={`https://aclassdoon.herokuapp.com${card.img1}`}
                                 alt="Second slide"
                             />
                         </Carousel.Item>
                         <Carousel.Item>
                             <img
                                 className="cardimg"
-                                src={`http://127.0.0.1:8000${card.img2}`}
+                                src={`https://aclassdoon.herokuapp.com${card.img2}`}
                                 alt="Third slide"
                             />
                         </Carousel.Item>
                         <Carousel.Item>
                             <img
                                 className="cardimg"
-                                src={`http://127.0.0.1:8000${card.img3}`}
+                                src={`https://aclassdoon.herokuapp.com${card.img3}`}
                                 alt="Fourth slide"
                             />
                         </Carousel.Item>
@@ -114,7 +114,7 @@ const CardIn = ({ card }) => {
                     <h6>Category: {card.category}</h6>
                     <h6>{card.description}</h6>
                     <p>Services Offered: {card.services}</p><br></br>
-                    <p className="text-muted footer-txt"><a href={`tel:${card.contact_no}`}>Contact Number: {card.contact_no}</a><ButtonMailto label={`Email: ${card.email}`} mailto={`mailto:${card.email}`} />{card.website ? card.website : ''}<br></br> {card.address ? `Address: ${card.address}` : ''}<br></br>{card.owner_name ? `--${card.owner_name}` : ''}<br></br></p>
+                    <p className="text-muted footer-txt"><a href={`tel:${card.contact_no}`}>Contact Number: {card.contact_no}</a><ButtonMailto label={`Email: ${card.email}`} mailto={`mailto:${card.email}`} /><a href={card.website ? card.website : ''} target="_blank" rel="noreferrer">{card.website ? card.website : ''}</a><br></br> {card.address ? `Address: ${card.address}` : ''}<br></br>{card.owner_name ? `--${card.owner_name}` : ''}<br></br></p>
                 </Modal.Body>
                 </Container>
                 <Button variant="primary" onClick={handleClose}>

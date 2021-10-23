@@ -4,7 +4,7 @@ import { LinkContainer } from "react-router-bootstrap";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {faAddressCard, faUsers } from '@fortawesome/free-solid-svg-icons'
 import "./Header.css"
-import img from "../media/logo.jpg"
+import img from "../media/logo3.png"
 
 
 function Header() {

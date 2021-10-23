@@ -6,7 +6,7 @@ import Cardy from './Cardy'
 import Pagination from './Pagination'
 import { Container, Row, Nav, NavDropdown, Col, Button } from 'react-bootstrap';
 import './Cards.css'
-import banner from '../media/acdbanner.jpg'
+import banner from '../media/banner2.png'
 import { Image } from 'react-bootstrap';
 
 const Cards = () => {
@@ -39,7 +39,7 @@ const Cards = () => {
     }
 
     const loadCards = async () => {
-        const result = await axios.get("http://127.0.0.1:8000/api/ad/");
+        const result = await axios.get("https://aclassdoon.herokuapp.com/api/ad/");
         setCards(result.data);
     }
     console.log(cards)
