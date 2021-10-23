@@ -60,7 +60,8 @@ const Cardx = ({ card }) => {
                         <div><img className="car-img" src={`https://aclassdoon.herokuapp.com${card.img3}`} alt="slide" /></div>
                     </Carousel>
                     </center>
-                    <Button onClick={handleShow}  variant='info' className="button-card"><Card.Header as="h5" className="card-h">{card.business_name}</Card.Header></Button>
+                    <Card.Header as="h5" className="card-h">{card.business_name}</Card.Header>
+                    <Button onClick={handleShow} variant="link" className="button-card">View More</Button>
                 </Card>
             </Col>
             <br></br>

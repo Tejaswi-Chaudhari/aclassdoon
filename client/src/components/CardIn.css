@@ -7,12 +7,14 @@
 .card-h{
     background-color: #000000;
     color: #a3eeee;
+    text-align: center;
 }
 .button-card{
     width: 100%;
-    background-color: transparent;
     border: none;
     outline: none;
+    color: #000000;
+    text-decoration: underline 3px #a3eeee;
 }
 .button-card:hover{
     background-color: transparent;
