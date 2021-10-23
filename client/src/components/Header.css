@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Italianno&display=swap');
   .nav-logo{
     border-radius: 50px;
-    width: 90px;
+    width: 80px;
     height: auto;
     margin-left: 120px;
   }
@@ -32,18 +32,19 @@
     margin-left: 550px;
   }
   .navbar .name:hover{
-    color: aquamarine;
+    color: #a3eeee;
   }
   
   .navbar .components .link:hover{
-    color: aquamarine;
+    border-style: solid;
+    border-width: 1px;
+    border-left: none;
+    border-right: none;
+    color: #a3eeee;
   }
-  .navbar .components .link:active{
-    color: aquamarine;
+  .navbar .components .link.active{
+    color: #a3eeee;
    }
-  .navbar .components .link:visited{
-    color: aquamarine;
-  }
   
   @media screen and (max-width: 767px){
     .navbar{

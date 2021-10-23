@@ -1,15 +1,18 @@
 .card-in{
     width: 350px;
-    border-color: #3562f5;
+    border-color: #a3eeee;
     border-width: 2px;
     margin-bottom: 10px;
 }
 .card-h{
-    color: #3562f5;
+    background-color: #000000;
+    color: #a3eeee;
 }
 .button-card{
+    width: 100%;
     background-color: transparent;
     border: none;
+    outline: none;
 }
 .button-card:hover{
     background-color: transparent;
@@ -19,7 +22,7 @@
     background-color: transparent;
     border: none;
 }
-.button-card:active{
+.button-card.active{
     background-color: transparent;
     border: none;
 }
@@ -31,8 +34,25 @@
     width: auto;
 }
 .modal-h{
-    background-color: #3562f5;
-    color: #ffffff;
+    background-color: #000000;
+    color: #a3eeee;
+}
+
+.footer-txt a{
+    color: #000000;
+    text-decoration: underline 3px #a3eeee;
+}
+.footer-txt a:hover{
+    color: #000000;
+    text-decoration: underline 3px #a3eeee;
+}
+.footer-txt a.active{
+    color: #000000;
+    text-decoration: underline 3px #a3eeee;
+}
+.footer-txt a:visited{
+    color: #000000;
+    text-decoration: underline 3px #a3eeee;
 }
 
 @media screen and (max-width: 767px){

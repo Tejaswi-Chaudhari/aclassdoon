@@ -10,6 +10,11 @@
     height: auto;
 }
 
+#basic-nav-dropdown{
+    color: #000000;
+    text-decoration: underline 4px #a3eeee;
+}
+
 @media screen and (max-width: 767px){
     .about-banner{
         max-width: 500px;

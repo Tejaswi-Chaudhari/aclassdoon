@@ -1,7 +1,7 @@
 import React from 'react';
 import "./about.css"
 import { Image } from 'react-bootstrap';
-import banner from '../media/acdbanner.jpg'
+import banner from '../media/banner2.png'
 
 const About = () => {
     return (
@@ -13,9 +13,9 @@ const About = () => {
             </p>
             <br></br>
             <div className="classdoon">
-                <h3>A Class Doon</h3></div>
+                <h3 className='display-6'>A Class Doon</h3></div>
             A Class Doon is a Web based Classified where we advertise and promote other businesses through our Portal. We also publish vacancies available in Dehradun along with following other facilities such as
-            <ol>
+            <ul>
                 <li>Logo Designing</li>
                 <li>Website Developement</li>
                 <li>Website Promotion</li>
@@ -23,7 +23,8 @@ const About = () => {
                 <li>Online and Offline Marketing Services</li>
                 <li>Lead Generation for Businesses</li>
                 <li>Video Advertising and Promotion</li>
-            </ol>
+            </ul>
+            <br></br>
         </div>
     )
 }

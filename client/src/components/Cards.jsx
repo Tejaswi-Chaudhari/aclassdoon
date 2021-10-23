@@ -89,7 +89,7 @@ const Cards = () => {
                     <hr></hr>
                     <br></br>
                     <Nav>
-                        <NavDropdown title="Filter by Category" id="basic-nav-dropdown">
+                        <NavDropdown title="Filter by Category" id="basic-nav-dropdown" >
                             {uniqueArr.map((item =>
                                 <NavDropdown.Item><Button onClick={() => filterData({ item })} variant="light">{item}</Button></NavDropdown.Item>
                             ))}
@@ -100,7 +100,7 @@ const Cards = () => {
                             onChange={(e) => searchItems(e.target.value)}
                         />
 
-                        <Button onClick={() => window.location.reload(false)} style={{ display: reset ? '' : 'none' }} variant='primary' className='reset-button'>
+                        <Button onClick={() => window.location.reload(false)} style={{ display: reset ? '' : 'none' }} variant='info' className='reset-button'>
                             Reset
                         </Button>
                     </Nav>

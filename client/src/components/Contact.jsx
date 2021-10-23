@@ -3,7 +3,7 @@ import { useState } from 'react';
 import axios from 'axios';
 import { Form, Button, Row, Col } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import {faEnvelope, faMapMarkerAlt, faPhoneAlt} from '@fortawesome/free-solid-svg-icons'
+import { faEnvelope, faMapMarkerAlt, faPhoneAlt } from '@fortawesome/free-solid-svg-icons'
 
 import "./contact.css"
 
@@ -32,21 +32,21 @@ const Contact = () => {
     return (
 
         <div className="title">
-            <h1 className="contactus">Contact Us</h1>
+            <h1 className="contactus display-6">Contact Us</h1>
             <hr></hr>
-            
-            <Row className="form">
+
+            <Row className="gx-5 form">
                 <Col lg={4} md={12} sm={12} xs={12}>
                     <div className="box">
-                        <h3 classname="box-h">Get in Touch</h3>
+                        <h3 classname="display-6">Get in Touch</h3>
                         <br></br>
-                        <p classname="box-t"><FontAwesomeIcon className='icon-contact' icon={faMapMarkerAlt} color="#3562f5"/> xyz, Mumbai, Maharashtra</p>
-                        <p classname="box-t"><FontAwesomeIcon className='icon-contact' icon={faPhoneAlt} color="#3562f5"/> +9999999999</p>
-                        <p classname="box-t"><FontAwesomeIcon className='icon-contact' icon={faEnvelope} color="#3562f5"/> abc@gmail.com</p>
+                        <p classname="box-t"><FontAwesomeIcon className='icon-contact' icon={faMapMarkerAlt} color="#a3eeee" /> xyz, Mumbai, Maharashtra</p>
+                        <p classname="box-t"><FontAwesomeIcon className='icon-contact' icon={faPhoneAlt} color="#a3eeee" /> +9999999999</p>
+                        <p classname="box-t"><FontAwesomeIcon className='icon-contact' icon={faEnvelope} color="#a3eeee" /> abc@gmail.com</p>
                     </div>
                 </Col>
-                <Col lg={8} md={12} sm={12} xs={12}>
-                <h2 className="contactform">Contact Form</h2>
+                <Col lg={8} md={12} sm={12} xs={12} className='right'>
+                    <h3 className="contactform">Contact Form</h3>
                     <Form onSubmit={e => onSubmit(e)}>
                         <Row className="mb-3">
                             <Form.Group as={Col} lg={4} xs={12} sm={12} controlId="formGridname">
@@ -74,7 +74,7 @@ const Contact = () => {
                                 as="textarea" placeholder="Write your message here" />
                         </Form.Group>
 
-                        <Button className="button" variant="primary" type="submit">
+                        <Button className="button" variant="info" type="submit">
                             Submit
                         </Button>
                     </Form>

@@ -10,7 +10,13 @@
 }
 
 .classdoon{
-    color: #3562f5;
+    color: #000000;
+    text-decoration: underline #a3eeee;
+
+}
+
+ul{
+    list-style: circle #a3eeee;
 }
 
 @media screen and (max-width: 767px){

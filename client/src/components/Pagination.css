@@ -2,3 +2,7 @@
     text-align: center;
     margin-bottom: 50px;
 }
+
+.c-pagination .pagination ul li .page-link{
+    color: #000000 !important;
+}

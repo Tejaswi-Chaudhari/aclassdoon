@@ -60,7 +60,7 @@ const Cardy = ({ card }) => {
                         <div><img className="car2-img" src={`https://aclassdoon.herokuapp.com${card.img3}`} alt="slide" /></div>
                     </Carousel>
                     </center>
-                    <Button onClick={handleShow} className="button-card"><Card.Header as="h5" className="card-h">{card.business_name}</Card.Header></Button>
+                    <Button onClick={handleShow}  variant='info' className="button-card"><Card.Header as="h5" className="card-h">{card.business_name}</Card.Header></Button>
                 </Card>
             </Col>
             <br></br>
@@ -93,7 +93,7 @@ const Cardy = ({ card }) => {
                         <p className="text-muted footer-txt"><a href={`tel:${card.contact_no}`}>Contact Number: {card.contact_no}</a><ButtonMailto label={`Email: ${card.email}`} mailto={`mailto:${card.email}`} /><a href={card.website ? card.website : ''} target="_blank" rel="noreferrer">{card.website ? card.website : ''}</a><br></br> {card.address ? `Address: ${card.address}` : ''}<br></br>{card.owner_name ? `--${card.owner_name}` : ''}<br></br></p>
                     </Modal.Body>
                 </Container>
-                <Button variant="primary" onClick={handleClose}>
+                <Button variant="info" onClick={handleClose}>
                     Close
                 </Button>
             </Modal>

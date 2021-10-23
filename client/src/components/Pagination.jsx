@@ -1,6 +1,6 @@
 import React from 'react'
 import './Pagination.css'
-import { Container } from 'react-bootstrap';
+import { Container, Button } from 'react-bootstrap';
 
 const Pagination = ({ cardsPerPage, totalCards, paginate }) => {
     const pageNumbers = [];
@@ -15,9 +15,9 @@ const Pagination = ({ cardsPerPage, totalCards, paginate }) => {
                 <ul className='pagination'>
                     {pageNumbers.map(number =>
                         <li key={number} className="page-item">
-                            <button onClick={() => paginate(number)} className="page-link">
+                            <Button onClick={() => paginate(number)} className="page-link" variant='info'>
                                 {number}
-                            </button>
+                            </Button>
                         </li>
                     )}
                 </ul>
