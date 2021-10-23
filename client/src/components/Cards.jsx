@@ -21,6 +21,9 @@ const Cards = () => {
         loadCards();
     }, []);
 
+    cards.sort(function (a, b) {
+        return b.id - a.id;
+      });
 
     const searchItems = (searchValue) => {
         setSearchInput(searchValue)
