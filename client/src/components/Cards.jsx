@@ -5,7 +5,7 @@ import Cardx from './Cardx';
 import Cardy from './Cardy';
 import Cardz from './Cardz'
 import Pagination from './Pagination'
-import { Container, Row, Nav, NavDropdown, Col, Button, Form } from 'react-bootstrap';
+import { Container, Row, Nav, NavDropdown, Col, Button } from 'react-bootstrap';
 import './Cards.css'
 import banner from '../media/banner2.png'
 import { Image } from 'react-bootstrap';
@@ -94,6 +94,28 @@ const Cards = () => {
         }
     }
 
+    // const allfilter = [];
+    // const filterf = [];
+    // const addFilter = ({ item }) => {
+    //     console.log('heyy', item, allfilter)
+    //     allfilter.push(item);
+    //     console.log(typeof (allfilter))
+    //     localStorage.setItem('mFilters', allfilter)
+    // }
+
+    // const filterNow = () => {
+    //     var x = localStorage.getItem('mFilters')
+    //     var kept = x.substring(0, x.indexOf(","));
+    //     var remainder = x.substring(x.indexOf(",") + 1, x.length());
+    //     console.log(x, typeof (x), kept, remainder)
+    //     for (let i = 0; i < x.length; i++) {
+    //         let filterData = cards.filter(ele => ele.category === x[i])
+    //         filterf.push(filterData)
+    //     }
+    //     setCards(filterf)
+    // }
+
+
     const paginate = pageNumber => setCurrentPage(pageNumber);
     const uniqueArr = [...new Set(cards.map(data => data.category))];
 
@@ -105,6 +127,7 @@ const Cards = () => {
     return (
         <div>
             <div className='card-start'>
+
                 <Container>
                     <center>
                         <Image src={banner} alt="banner" className="about-banner" />
@@ -113,94 +136,99 @@ const Cards = () => {
                     <br></br>
                     <Nav>
                         <NavDropdown title="Filter by Category" id="basic-nav-dropdown" >
-                            {uniqueArr.map((item =>
-                                <NavDropdown.Item>
-                                    <label><input type='checkbox' onClick={() => filterData({item})} /> {item}</label>
-                                    {/* <Button onClick={() => filterData({ item })} variant="light">{item}</Button> */}
-                                </NavDropdown.Item>
-                            ))}
-                        </NavDropdown>
+                            {uniqueArr.map((item) =>
+                                <div>
+                                    <NavDropdown.Item>
+                                        <Button onClick={() => filterData({ item })} variant="light">{item}</Button>
+                                    </NavDropdown.Item>
+                                </div>
+                            )}</NavDropdown>
+                            <div>
+                                {/* {uniqueArr.map((item) =>
+                                <label className="filter"><input type='checkbox' onClick={() => addFilter({ item })} /> {item}</label>
+                            )}
+                            <Button variant='info' onClick={() => filterNow()}>Filter</Button> */}
+                            </div>
+                            <input type="text"
+                                placeholder='Search...'
+                                onChange={(e) => searchItems(e.target.value)}
+                            />
 
-                        <input type="text"
-                            placeholder='Search...'
-                            onChange={(e) => searchItems(e.target.value)}
-                        />
-
-                        <Button onClick={() => window.location.reload(false)} style={{ display: reset ? '' : 'none' }} variant='info' className='reset-button'>
-                            Reset
-                        </Button>
+                            <Button onClick={() => window.location.reload(false)} style={{ display: reset ? '' : 'none' }} variant='info' className='reset-button'>
+                                Reset
+                            </Button>
                     </Nav>
-                    <br></br>
-                    <div>
-                        {cardsp0.map((item) =>
-                            <Cardx key={item.id} card={item} />
-                        )}
-                    </div>
-                    <div>
-                        {cardsp1.map((item) =>
-                            <Cardx key={item.id} card={item} />
-                        )}
-                    </div>
-                    <div>
-                        <center>
-                            <Row>
-                                <Col lg={9}>
-                                    {cardsp2.map((item) =>
-                                        <Cardy key={item.id} card={item} />
-                                    )}
-                                </Col>
-                                <Col lg={3}>
-                                    {
-                                        sp41 ?
-                                            sp41.map((item) =>
-                                                <Card key={item.id} card={item} />
-                                            ) : null
-                                    }
-                                </Col>
-                            </Row>
-                        </center>
-                    </div>
-                    <div>
-                        <center>
-                            <Row>
-                                <Col lg={6}>
-                                    {sp31.map((item) =>
-                                        <Cardz key={item.id} card={item} />
-                                    )}
-                                </Col>
-                                <Col lg={6}>
-                                    {
-                                        sp32.map((item) =>
+                        <br></br>
+                        <div>
+                            {cardsp0.map((item) =>
+                                <Cardx key={item.id} card={item} />
+                            )}
+                        </div>
+                        <div>
+                            {cardsp1.map((item) =>
+                                <Cardx key={item.id} card={item} />
+                            )}
+                        </div>
+                        <div>
+                            <center>
+                                <Row>
+                                    <Col lg={9}>
+                                        {cardsp2.map((item) =>
+                                            <Cardy key={item.id} card={item} />
+                                        )}
+                                    </Col>
+                                    <Col lg={3}>
+                                        {
+                                            sp41 ?
+                                                sp41.map((item) =>
+                                                    <Card key={item.id} card={item} />
+                                                ) : null
+                                        }
+                                    </Col>
+                                </Row>
+                            </center>
+                        </div>
+                        <div>
+                            <center>
+                                <Row>
+                                    <Col lg={6}>
+                                        {sp31.map((item) =>
                                             <Cardz key={item.id} card={item} />
-                                        )
-                                    }
-                                </Col>
-                            </Row>
-                        </center>
-                    </div>
-                    <div>
-                        <Col lg={6}>
-                            {
-                                sp33 ?
-                                    sp33.map((item) =>
-                                        <Cardz key={item.id} card={item} />
-                                    ) : null
+                                        )}
+                                    </Col>
+                                    <Col lg={6}>
+                                        {
+                                            sp32.map((item) =>
+                                                <Cardz key={item.id} card={item} />
+                                            )
+                                        }
+                                    </Col>
+                                </Row>
+                            </center>
+                        </div>
+                        <div>
+                            <Col lg={6}>
+                                {
+                                    sp33 ?
+                                        sp33.map((item) =>
+                                            <Cardz key={item.id} card={item} />
+                                        ) : null
 
-                            } </Col>
-                    </div>
-                    <Row lg={4}>
-                        {
-                            sp42 ?
-                                sp42.map((item) =>
-                                    <Card key={item.id} card={item} />
-                                ) : null
-                        }
-                    </Row>
+                                } </Col>
+                        </div>
+                        <Row lg={4}>
+                            {
+                                sp42 ?
+                                    sp42.map((item) =>
+                                        <Card key={item.id} card={item} />
+                                    ) : null
+                            }
+                        </Row>
                 </Container>
-                <Pagination cardsPerPage={cardsPerPage} totalCards={cards.length} paginate={paginate} />
+                    <Pagination cardsPerPage={cardsPerPage} totalCards={cards.length} paginate={paginate} />
             </div>
-        </div>
-    )
+            </div>
+            )
 }
 
-export default Cards
+            export default Cards
