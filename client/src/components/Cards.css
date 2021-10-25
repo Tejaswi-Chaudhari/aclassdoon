@@ -21,7 +21,7 @@
 
 @media screen and (max-width: 767px){
     .about-banner{
-        max-width: 500px;
+        max-width: 320px;
         margin: auto;
     }
     .reset-button{

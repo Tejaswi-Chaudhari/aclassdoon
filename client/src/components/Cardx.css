@@ -9,3 +9,13 @@
 .car-1{
   margin-bottom: 10px;
 }
+@media screen and (max-width: 767px){
+  .car1-img{
+      max-width: 300px;
+      height: auto;
+  }
+  .car1-img-modal{
+      max-width: 300px;
+      height: auto;
+  }
+}

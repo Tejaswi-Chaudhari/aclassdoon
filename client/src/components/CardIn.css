@@ -1,6 +1,9 @@
-.card-in{
+/* .card-in{
     width: 250px;
     border-color: #a3eeee;
+} */
+.card-img{
+    height: 250px;
 }
 .card-h{
     background-color: #000000;
@@ -57,5 +60,12 @@
     .card-in{
         margin-left: auto;
         margin-right: auto;
+    }
+    .card-img{
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+        max-width: 300px;
+        height: auto;
     }
 }
