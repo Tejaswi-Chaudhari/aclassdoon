@@ -1,8 +1,6 @@
 .card-in{
-    width: 350px;
+    width: 250px;
     border-color: #a3eeee;
-    border-width: 2px;
-    margin-bottom: 10px;
 }
 .card-h{
     background-color: #000000;
@@ -11,29 +9,27 @@
 }
 .button-card{
     width: 100%;
-    border: none;
-    outline: none;
     color: #000000;
     text-decoration: underline 3px #a3eeee;
 }
 .button-card:hover{
-    background-color: transparent;
-    border: none;
+    color: #000000;
+    text-decoration: underline 3px #a3eeee;
 }
 .button-card:visited{
-    background-color: transparent;
-    border: none;
+    color: #000000;
+    text-decoration: underline 3px #a3eeee;
 }
 .button-card.active{
-    background-color: transparent;
-    border: none;
+    color: #000000;
+    text-decoration: underline 3px #a3eeee;
 }
 .footer-txt{
     text-align: center;
 }
 .cardimg{
-    height: 300px;
-    width: auto;
+    height: 250px;
+    width: 250px;
 }
 .modal-h{
     background-color: #000000;

@@ -2,9 +2,10 @@ import { React, useEffect, useState } from 'react';
 import axios from 'axios';
 import Card from './CardIn';
 import Cardx from './Cardx';
-import Cardy from './Cardy'
+import Cardy from './Cardy';
+import Cardz from './Cardz'
 import Pagination from './Pagination'
-import { Container, Row, Nav, NavDropdown, Col, Button } from 'react-bootstrap';
+import { Container, Row, Nav, NavDropdown, Col, Button, Form } from 'react-bootstrap';
 import './Cards.css'
 import banner from '../media/banner2.png'
 import { Image } from 'react-bootstrap';
@@ -13,9 +14,11 @@ const Cards = () => {
 
     const [cards, setCards] = useState([]);
     const [currentPage, setCurrentPage] = useState(1);
-    const [cardsPerPage] = useState(9);
+    const [cardsPerPage] = useState(25);
     const [reset, setReset] = useState(false);
     const [searchInput, setSearchInput] = useState('');
+
+    console.log(cards)
 
     useEffect(() => {
         loadCards();
@@ -23,7 +26,7 @@ const Cards = () => {
 
     cards.sort(function (a, b) {
         return b.id - a.id;
-      });
+    });
 
     const searchItems = (searchValue) => {
         setSearchInput(searchValue)
@@ -42,37 +45,54 @@ const Cards = () => {
     }
 
     const loadCards = async () => {
-        const result = await axios.get("https://aclassdoon.herokuapp.com/api/ad/");
+        const result = await axios.get("https://aclassdoon.pythonanywhere.com/api/ad/");
         setCards(result.data);
     }
-    console.log(cards)
 
     const indexOfLastCard = currentPage * cardsPerPage;
     const indexOfFirstCard = indexOfLastCard - cardsPerPage;
     const currentCards = cards.slice(indexOfFirstCard, indexOfLastCard);
+    const cardsp0 = currentCards.filter(i => i.priority === 0);
     const cardsp1 = currentCards.filter(i => i.priority === 1);
     const cardsp2 = currentCards.filter(i => i.priority === 2);
     const cardsp3 = currentCards.filter(i => i.priority === 3);
-    const cardssp2 = cards.filter(i => i.priority === 2);
-    const cardssp3 = cards.filter(i => i.priority === 3);
+    const cardsp4 = currentCards.filter(i => i.priority === 4);
     const sp31 = [];
     const sp32 = [];
+    const sp33 = [];
+    const sp41 = [];
+    const sp42 = [];
+    const sp3len = cardsp3.length
 
-    if (cardsp3 >= cardsp2) {
-        for (let i = 0; i < cardsp2.length; i++) {
+    if (sp3len % 2 === 0) {
+        for (let i = 0; i < sp3len; i += 2) {
             sp31.push(cardsp3[i])
-        }
-        for (let i = cardsp2.length; i < cardsp3.length; i++) {
-            sp32.push(cardsp3[i])
+            sp32.push(cardsp3[i + 1])
         }
     }
     else {
-        for (let i = 0; i < cardsp3.length; i++) {
+        for (let i = 0; i < sp3len - 1; i += 2) {
             sp31.push(cardsp3[i])
+            sp32.push(cardsp3[i + 1])
         }
+        sp33.push(cardsp3[sp3len - 1])
     }
 
-    console.log(cardssp2, cardssp3)
+    console.log(sp31, sp32)
+
+    if (cardsp4 >= cardsp2) {
+        for (let i = 0; i < cardsp2.length; i++) {
+            sp41.push(cardsp4[i])
+        }
+        for (let i = cardsp2.length; i < cardsp4.length; i++) {
+            sp42.push(cardsp4[i])
+        }
+    }
+    else {
+        for (let i = 0; i < cardsp4.length; i++) {
+            sp41.push(cardsp4[i])
+        }
+    }
 
     const paginate = pageNumber => setCurrentPage(pageNumber);
     const uniqueArr = [...new Set(cards.map(data => data.category))];
@@ -94,7 +114,10 @@ const Cards = () => {
                     <Nav>
                         <NavDropdown title="Filter by Category" id="basic-nav-dropdown" >
                             {uniqueArr.map((item =>
-                                <NavDropdown.Item><Button onClick={() => filterData({ item })} variant="light">{item}</Button></NavDropdown.Item>
+                                <NavDropdown.Item>
+                                    <label><input type='checkbox' onClick={() => filterData({item})} /> {item}</label>
+                                    {/* <Button onClick={() => filterData({ item })} variant="light">{item}</Button> */}
+                                </NavDropdown.Item>
                             ))}
                         </NavDropdown>
 
@@ -109,6 +132,11 @@ const Cards = () => {
                     </Nav>
                     <br></br>
                     <div>
+                        {cardsp0.map((item) =>
+                            <Cardx key={item.id} card={item} />
+                        )}
+                    </div>
+                    <div>
                         {cardsp1.map((item) =>
                             <Cardx key={item.id} card={item} />
                         )}
@@ -116,15 +144,15 @@ const Cards = () => {
                     <div>
                         <center>
                             <Row>
-                                <Col lg={8}>
+                                <Col lg={9}>
                                     {cardsp2.map((item) =>
                                         <Cardy key={item.id} card={item} />
                                     )}
                                 </Col>
-                                <Col lg={4}>
+                                <Col lg={3}>
                                     {
-                                        sp31 ?
-                                            sp31.map((item) =>
+                                        sp41 ?
+                                            sp41.map((item) =>
                                                 <Card key={item.id} card={item} />
                                             ) : null
                                     }
@@ -132,10 +160,38 @@ const Cards = () => {
                             </Row>
                         </center>
                     </div>
-                    <Row lg={3}>
+                    <div>
+                        <center>
+                            <Row>
+                                <Col lg={6}>
+                                    {sp31.map((item) =>
+                                        <Cardz key={item.id} card={item} />
+                                    )}
+                                </Col>
+                                <Col lg={6}>
+                                    {
+                                        sp32.map((item) =>
+                                            <Cardz key={item.id} card={item} />
+                                        )
+                                    }
+                                </Col>
+                            </Row>
+                        </center>
+                    </div>
+                    <div>
+                        <Col lg={6}>
+                            {
+                                sp33 ?
+                                    sp33.map((item) =>
+                                        <Cardz key={item.id} card={item} />
+                                    ) : null
+
+                            } </Col>
+                    </div>
+                    <Row lg={4}>
                         {
-                            sp32 ?
-                                sp32.map((item) =>
+                            sp42 ?
+                                sp42.map((item) =>
                                     <Card key={item.id} card={item} />
                                 ) : null
                         }

@@ -1,9 +1,8 @@
 import { React, useState } from 'react'
-import { Card, Nav, Modal, Button, Col, Container } from 'react-bootstrap';
-import 'react-multi-carousel/lib/styles.css';
-import './Cardx.css'
+import { Card, Nav, Col, Button, Modal, Container } from 'react-bootstrap';
+import './Cardz.css'
 
-const Cardx = ({ card }) => {
+const Cardz = ({ card }) => {
 
     const [show, setShow] = useState(false);
 
@@ -21,18 +20,18 @@ const Cardx = ({ card }) => {
             >
                 {label}
             </Nav.Link>
-        </>
+            </>
         );
     };
 
     return (
         <div>
 
-            <Col lg={12}>
-                <Card className="car-1">
-                    <br></br>
+            <Col>
+                <Card className="car-3">
                     <center>
-                        <div><img className="car1-img" src={`https://aclassdoon.pythonanywhere.com${card.thumbnail}`} alt="slide" /></div>
+                    <br></br>                   
+                        <div><img className="car3-img" src={`https://aclassdoon.pythonanywhere.com${card.thumbnail}`} alt="slide" /></div>
                     </center>
                     <Card.Header as="h5" className="card-h">{card.business_name}</Card.Header>
                     <Button onClick={handleShow} variant="link" className="button-card">View More</Button>
@@ -53,7 +52,7 @@ const Cardx = ({ card }) => {
                     <Modal.Title id="contained-modal-title-vcenter">{card.business_name}</Modal.Title>
                 </Modal.Header>
                 <center>
-                        <div><img className="car1-img-modal" src={`https://aclassdoon.pythonanywhere.com${card.thumbnail}`} alt="slide" /></div>
+                        <div><img className="car3-img-modal" src={`https://aclassdoon.pythonanywhere.com${card.thumbnail}`} alt="slide" /></div>
                 </center>
                 <Container>
                     <Modal.Body>
@@ -68,9 +67,9 @@ const Cardx = ({ card }) => {
                 </Button>
             </Modal>
             <br></br>
-        </div>
+        </div>                
     )
 
 }
 
-export default Cardx
+export default Cardz

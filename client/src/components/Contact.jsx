@@ -21,7 +21,7 @@ const Contact = () => {
 
     const onSubmit = async (e) => {
         e.preventDefault();
-        await axios.post("https://aclassdoon.herokuapp.com/api/contact/", user);
+        await axios.post("https://aclassdoon.pythonanywhere.com/api/contact/", user);
         setUser({
             name: '',
             emailid: '',

@@ -28,33 +28,33 @@ const CardIn = ({ card }) => {
             <Col lg={12}>
                 <Card className="card-in">
                     <br></br>
-                    {/* <Card.Img className="card-img" variant="top" src={`https://aclassdoon.herokuapp.com${card.thumbnail}`} /> */}
+                    {/* <Card.Img className="card-img" variant="top" src={`https://aclassdoon.pythonanywhere.com${card.thumbnail}`} /> */}
                     <Carousel fade nextLabel="" prevLabel="">
                         <Carousel.Item>
                             <img
                                 className="card-img"
-                                src={`https://aclassdoon.herokuapp.com${card.thumbnail}`}
+                                src={`https://aclassdoon.pythonanywhere.com${card.thumbnail}`}
                                 alt="First slide"
                             />
                         </Carousel.Item>
                         <Carousel.Item>
                             <img
                                 className="card-img"
-                                src={`https://aclassdoon.herokuapp.com${card.img1}`}
+                                src={`https://aclassdoon.pythonanywhere.com${card.img1}`}
                                 alt="Second slide"
                             />
                         </Carousel.Item>
                         <Carousel.Item>
                             <img
                                 className="card-img"
-                                src={`https://aclassdoon.herokuapp.com${card.img2}`}
+                                src={`https://aclassdoon.pythonanywhere.com${card.img2}`}
                                 alt="Third slide"
                             />
                         </Carousel.Item>
                         <Carousel.Item>
                             <img
                                 className="card-img"
-                                src={`https://aclassdoon.herokuapp.com${card.img3}`}
+                                src={`https://aclassdoon.pythonanywhere.com${card.img3}`}
                                 alt="Fourth slide"
                             />
                         </Carousel.Item>
@@ -63,7 +63,6 @@ const CardIn = ({ card }) => {
                     <Button onClick={handleShow} variant="link" className="button-card">View More</Button>
                 </Card>
             </Col>
-            <br></br>
             <br></br>
 
             <Modal
@@ -83,28 +82,28 @@ const CardIn = ({ card }) => {
                         <Carousel.Item>
                             <img
                                 className="cardimg"
-                                src={`https://aclassdoon.herokuapp.com${card.thumbnail}`}
+                                src={`https://aclassdoon.pythonanywhere.com${card.thumbnail}`}
                                 alt="First slide"
                             />
                         </Carousel.Item>
                         <Carousel.Item>
                             <img
                                 className="cardimg"
-                                src={`https://aclassdoon.herokuapp.com${card.img1}`}
+                                src={`https://aclassdoon.pythonanywhere.com${card.img1}`}
                                 alt="Second slide"
                             />
                         </Carousel.Item>
                         <Carousel.Item>
                             <img
                                 className="cardimg"
-                                src={`https://aclassdoon.herokuapp.com${card.img2}`}
+                                src={`https://aclassdoon.pythonanywhere.com${card.img2}`}
                                 alt="Third slide"
                             />
                         </Carousel.Item>
                         <Carousel.Item>
                             <img
                                 className="cardimg"
-                                src={`https://aclassdoon.herokuapp.com${card.img3}`}
+                                src={`https://aclassdoon.pythonanywhere.com${card.img3}`}
                                 alt="Fourth slide"
                             />
                         </Carousel.Item>
@@ -122,6 +121,7 @@ const CardIn = ({ card }) => {
                     Close
                 </Button>
             </Modal>
+            <br></br>
         </div>
     )
 }

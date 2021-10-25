@@ -1,6 +1,5 @@
 import { React, useState } from 'react'
 import { Card, Nav, Col, Button, Modal, Container } from 'react-bootstrap';
-import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 import './Cardy.css'
 
@@ -10,26 +9,6 @@ const Cardy = ({ card }) => {
 
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
-
-    const responsive = {
-        superLargeDesktop: {
-            // the naming can be any, depends on you.
-            breakpoint: { max: 4000, min: 3000 },
-            items: 5
-        },
-        desktop: {
-            breakpoint: { max: 3000, min: 1024 },
-            items: 2
-        },
-        tablet: {
-            breakpoint: { max: 1024, min: 464 },
-            items: 2
-        },
-        mobile: {
-            breakpoint: { max: 464, min: 0 },
-            items: 1
-        }
-    };
 
     const ButtonMailto = ({ mailto, label }) => {
         return (<>
@@ -50,15 +29,10 @@ const Cardy = ({ card }) => {
         <div>
 
             <Col lg={12}>
-                <Card className="car-1">
+                <Card className="car-2">
                     <center>
-                    <br></br>
-                    <Carousel responsive={responsive}>
-                        <div><img className="car2-img" src={`https://aclassdoon.herokuapp.com${card.thumbnail}`} alt="slide" /></div>
-                        <div><img className="car2-img" src={`https://aclassdoon.herokuapp.com${card.img1}`} alt="slide" /></div>
-                        <div><img className="car2-img" src={`https://aclassdoon.herokuapp.com${card.img2}`} alt="slide" /></div>
-                        <div><img className="car2-img" src={`https://aclassdoon.herokuapp.com${card.img3}`} alt="slide" /></div>
-                    </Carousel>
+                    <br></br>                   
+                        <div><img className="car2-img" src={`https://aclassdoon.pythonanywhere.com${card.thumbnail}`} alt="slide" /></div>
                     </center>
                     <Card.Header as="h5" className="card-h">{card.business_name}</Card.Header>
                     <Button onClick={handleShow} variant="link" className="button-card">View More</Button>
@@ -79,12 +53,7 @@ const Cardy = ({ card }) => {
                     <Modal.Title id="contained-modal-title-vcenter">{card.business_name}</Modal.Title>
                 </Modal.Header>
                 <center>
-                    <Carousel responsive={responsive} className="car2-modal">
-                        <div><img className="car2-img-modal" src={`https://aclassdoon.herokuapp.com${card.thumbnail}`} alt="slide" /></div>
-                        <div><img className="car2-img-modal" src={`https://aclassdoon.herokuapp.com${card.img1}`} alt="slide" /></div>
-                        <div><img className="car2-img-modal" src={`https://aclassdoon.herokuapp.com${card.img2}`} alt="slide" /></div>
-                        <div><img className="car2-img-modal" src={`https://aclassdoon.herokuapp.com${card.img3}`} alt="slide" /></div>
-                    </Carousel>
+                        <div><img className="car2-img-modal" src={`https://aclassdoon.pythonanywhere.com${card.thumbnail}`} alt="slide" /></div>
                 </center>
                 <Container>
                     <Modal.Body>
