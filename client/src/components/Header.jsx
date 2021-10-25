@@ -14,7 +14,7 @@ function Header() {
                 <Navbar expand="lg" className="navbar">
                     <Image src={img} alt="brand-logo" className="nav-logo" />
                     <LinkContainer to="/">
-                        <Navbar.Brand className="name">A Class Doon</Navbar.Brand>
+                        <Navbar.Brand className="name display-6"><b>A Class Doon</b></Navbar.Brand>
                     </LinkContainer>
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
                     <Navbar.Collapse id="basic-navbar-nav">
