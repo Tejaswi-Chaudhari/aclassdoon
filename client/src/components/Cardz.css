@@ -11,13 +11,39 @@
     height: 250px;
     width: 500px;
 }
-@media screen and (max-width: 767px){
+
+@media only screen 
+and (min-device-width: 768px) 
+and (max-device-width: 1024px) 
+and (-webkit-min-device-pixel-ratio: 2) {
     .car3-img{
-        max-width: 300px;
+        max-width: 450px;
         height: auto;
     }
     .car3-img-modal{
-        max-width: 300px;
+        max-width: 450px;
         height: auto;
     }
 }
+
+@media only screen and (max-width: 767px){
+    .car3-img{
+        max-width: 280px;
+        height: auto;
+    }
+    .car3-img-modal{
+        max-width: 280px;
+        height: auto;
+    }
+}
+
+@media screen and (max-width: 280px){
+    .car3-img{
+      max-width: 250px;
+      height: auto;
+  }
+  .car3-img-modal{
+      max-width: 250px;
+      height: auto;
+  }
+  }

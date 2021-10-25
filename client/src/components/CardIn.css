@@ -11,7 +11,6 @@
     text-align: center;
 }
 .button-card{
-    width: 100%;
     color: #000000;
     text-decoration: underline 3px #064d90;
 }
@@ -54,6 +53,22 @@
 .footer-txt a:visited{
     color: #000000;
     text-decoration: underline 3px #064d90;
+}
+.vm{
+    display: inline-block;
+    margin: 0;
+}
+
+@media only screen 
+and (min-device-width: 768px) 
+and (max-device-width: 1024px) 
+and (-webkit-min-device-pixel-ratio: 2) {
+    .card-img{
+        max-width: 200px;
+        height: auto;
+        margin: auto;
+        display: block;
+    }
 }
 
 @media screen and (max-width: 767px){

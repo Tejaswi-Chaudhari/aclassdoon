@@ -1,4 +1,3 @@
-
   .nav-logo{
     border-radius: 50px;
     width: 80px;
@@ -28,9 +27,15 @@
     padding-right: 25px;
   }
   .navbar .components .a1{
-    margin-left: 550px;
+    margin-left: 400px;
   }
   .navbar .name:hover{
+    color: #f3f3f3;
+  }
+  .navbar .name.active{
+    color: #f3f3f3;
+  }
+  .navbar .name:visited{
     color: #f3f3f3;
   }
   
@@ -45,7 +50,10 @@
     color: #f3f3f3;
    }
   
-  @media screen and (max-width: 767px){
+   @media only screen 
+   and (min-device-width: 768px) 
+   and (max-device-width: 1024px) 
+   and (-webkit-min-device-pixel-ratio: 2) {
     .navbar{
       height: auto;
     }
@@ -62,12 +70,58 @@
       padding-left: 10px;
       font-weight: 50px;
       font-size: 30px;
-      font-family: 'Italianno', cursive;
+    }
+    .navbar-toggler-icon{
+      background-color: #ffffff;
     }
     .navbar .components .a1{
       margin: auto;
     }
     .navbar .components .link {
       margin: auto;
+    }
+   }
+   
+
+  @media screen and (max-width: 767px){
+    .navbar{
+      height: auto;
+    }
+    .nav-logo{
+      border-radius: 50px;
+      width: 40px;
+      height: auto;
+      margin-left: 20px;
+    }
+    .navbar-toggler-icon{
+      background-color: #ffffff;
+    }
+    .navbar .name{
+      text-decoration: none;
+      text-align:left;
+      color:#ffffff;
+      padding-left: 10px;
+      font-weight: 50px;
+      font-size: 30px;
+    }
+    .navbar .components .a1{
+      margin: auto;
+    }
+    .navbar .components .link {
+      margin: auto;
+    }
+  }
+
+  @media screen and (max-width: 280px){
+    .navbar .name{
+      text-decoration: none;
+      text-align:left;
+      color:#ffffff;
+      padding-left: 10px;
+      font-weight: 50px;
+      font-size: 20px;
+    }
+    .navbar .components .link {
+      font-size: 18px;
     }
   }

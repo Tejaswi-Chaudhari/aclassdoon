@@ -25,6 +25,31 @@
     width: 650px;
 }
 
+@media only screen 
+   and (min-device-width: 768px) 
+   and (max-device-width: 1024px) 
+   and (-webkit-min-device-pixel-ratio: 2){
+    .about-banner{
+        max-width: 700px;
+        margin: auto;
+    }
+    .search{
+        margin: auto;
+        align-self: stretch;
+    }
+    #basic-nav-dropdown{
+        margin: auto;
+        font-size: 18px;
+        text-decoration: none;
+    }
+    .filter{
+        margin: 0;
+    }
+    .reset-button{
+        margin-left: 22px;
+    }
+   }
+
 @media screen and (max-width: 767px){
     .about-banner{
         max-width: 320px;
@@ -33,4 +58,29 @@
     .reset-button{
         margin-left: 40px;
     }
+    .search{
+        margin: auto;
+        align-self: stretch;
+    }
+    #basic-nav-dropdown{
+        margin: auto;
+        font-size: 18px;
+        text-decoration: none;
+    }
+    .filter{
+        margin: 0;
+    }
 }
+
+
+@media screen and (max-width: 280px){
+    .about-banner{
+        max-width: 260px !important;
+        margin: auto;
+    }
+    .reset-button{
+        margin-top: 20px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+  }

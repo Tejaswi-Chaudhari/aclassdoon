@@ -172,12 +172,12 @@ const Cards = () => {
                         <div>
                             <center>
                                 <Row>
-                                    <Col lg={9}>
+                                    <Col lg={9} md={12}>
                                         {cardsp2.map((item) =>
                                             <Cardy key={item.id} card={item} />
                                         )}
                                     </Col>
-                                    <Col lg={3}>
+                                    <Col lg={3} md={12}>
                                         {
                                             sp41 ?
                                                 sp41.map((item) =>
@@ -191,12 +191,12 @@ const Cards = () => {
                         <div>
                             <center>
                                 <Row>
-                                    <Col lg={6}>
+                                    <Col lg={6} md={12}>
                                         {sp31.map((item) =>
                                             <Cardz key={item.id} card={item} />
                                         )}
                                     </Col>
-                                    <Col lg={6}>
+                                    <Col lg={6} md={12}>
                                         {
                                             sp32.map((item) =>
                                                 <Cardz key={item.id} card={item} />
@@ -207,7 +207,7 @@ const Cards = () => {
                             </center>
                         </div>
                         <div>
-                            <Col lg={6}>
+                            <Col lg={6} md={12}>
                                 {
                                     sp33 ?
                                         sp33.map((item) =>
@@ -216,7 +216,7 @@ const Cards = () => {
 
                                 } </Col>
                         </div>
-                        <Row lg={4}>
+                        <Row lg={4} md={12}>
                             {
                                 sp42 ?
                                     sp42.map((item) =>

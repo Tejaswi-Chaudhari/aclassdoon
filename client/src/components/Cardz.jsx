@@ -9,6 +9,9 @@ const Cardz = ({ card }) => {
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
 
+    var desc = card.description;
+    var halfSen = desc.slice(0, 18);
+
     const ButtonMailto = ({ mailto, label }) => {
         return (<>
             <Nav.Link
@@ -34,7 +37,7 @@ const Cardz = ({ card }) => {
                         <div><img className="car3-img" src={`https://aclassdoon.pythonanywhere.com${card.thumbnail}`} alt="slide" /></div>
                     </center>
                     <Card.Header as="h5" className="card-h">{card.business_name}</Card.Header>
-                    <Button onClick={handleShow} variant="link" className="button-card">View More</Button>
+                    <h6 className='vm'>{halfSen}<Button onClick={handleShow} variant="link" className="button-card">View More</Button></h6>
                 </Card>
             </Col>
             <br></br>
