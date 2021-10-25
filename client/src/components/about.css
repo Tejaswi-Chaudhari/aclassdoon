@@ -25,4 +25,8 @@ ul{
         padding-right: 10px;
         margin: auto;
     }
+    .about-banner{
+        margin-top:20px;   
+        max-width: 300px;
+    }
 }
