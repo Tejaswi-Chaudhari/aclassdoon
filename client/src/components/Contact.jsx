@@ -40,9 +40,9 @@ const Contact = () => {
                     <div className="box">
                         <h3 classname="display-6">Get in Touch</h3>
                         <br></br>
-                        <p classname="box-t"><FontAwesomeIcon className='icon-contact' icon={faMapMarkerAlt} color="#a3eeee" /> xyz, Mumbai, Maharashtra</p>
-                        <p classname="box-t"><FontAwesomeIcon className='icon-contact' icon={faPhoneAlt} color="#a3eeee" /> +9999999999</p>
-                        <p classname="box-t"><FontAwesomeIcon className='icon-contact' icon={faEnvelope} color="#a3eeee" /> abc@gmail.com</p>
+                        <p classname="box-t"><FontAwesomeIcon className='icon-contact' icon={faMapMarkerAlt} /> xyz, Mumbai, Maharashtra</p>
+                        <p classname="box-t"><FontAwesomeIcon className='icon-contact' icon={faPhoneAlt} /> +9999999999</p>
+                        <p classname="box-t"><FontAwesomeIcon className='icon-contact' icon={faEnvelope} /> abc@gmail.com</p>
                     </div>
                 </Col>
                 <Col lg={8} md={12} sm={12} xs={12} className='right'>
@@ -74,7 +74,7 @@ const Contact = () => {
                                 as="textarea" placeholder="Write your message here" />
                         </Form.Group>
 
-                        <Button className="button" variant="info" type="submit">
+                        <Button className="button" variant="dark" type="submit">
                             Submit
                         </Button>
                     </Form>

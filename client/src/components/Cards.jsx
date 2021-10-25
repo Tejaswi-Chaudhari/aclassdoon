@@ -154,7 +154,7 @@ const Cards = () => {
                                 onChange={(e) => searchItems(e.target.value)}
                             />
 
-                            <Button onClick={() => window.location.reload(false)} style={{ display: reset ? '' : 'none' }} variant='info' className='reset-button'>
+                            <Button onClick={() => window.location.reload(false)} style={{ display: reset ? '' : 'none' }} variant='dark' className='reset-button'>
                                 Reset
                             </Button>
                     </Nav>

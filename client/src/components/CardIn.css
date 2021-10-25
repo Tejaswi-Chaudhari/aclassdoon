@@ -7,25 +7,25 @@
 }
 .card-h{
     background-color: #000000;
-    color: #a3eeee;
+    color: #ffffff;
     text-align: center;
 }
 .button-card{
     width: 100%;
     color: #000000;
-    text-decoration: underline 3px #a3eeee;
+    text-decoration: underline 3px #064d90;
 }
 .button-card:hover{
     color: #000000;
-    text-decoration: underline 3px #a3eeee;
+    text-decoration: underline 3px #064d90;
 }
 .button-card:visited{
     color: #000000;
-    text-decoration: underline 3px #a3eeee;
+    text-decoration: underline 3px #064d90;
 }
 .button-card.active{
     color: #000000;
-    text-decoration: underline 3px #a3eeee;
+    text-decoration: underline 3px #064d90;
 }
 .footer-txt{
     text-align: center;
@@ -36,24 +36,24 @@
 }
 .modal-h{
     background-color: #000000;
-    color: #a3eeee;
+    color: #ffffff;
 }
 
 .footer-txt a{
     color: #000000;
-    text-decoration: underline 3px #a3eeee;
+    text-decoration: underline 3px #064d90;
 }
 .footer-txt a:hover{
     color: #000000;
-    text-decoration: underline 3px #a3eeee;
+    text-decoration: underline 3px #064d90;
 }
 .footer-txt a.active{
     color: #000000;
-    text-decoration: underline 3px #a3eeee;
+    text-decoration: underline 3px #064d90;
 }
 .footer-txt a:visited{
     color: #000000;
-    text-decoration: underline 3px #a3eeee;
+    text-decoration: underline 3px #064d90;
 }
 
 @media screen and (max-width: 767px){

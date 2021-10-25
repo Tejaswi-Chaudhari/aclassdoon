@@ -32,7 +32,7 @@
     margin-left: 550px;
   }
   .navbar .name:hover{
-    color: #a3eeee;
+    color: #f3f3f3;
   }
   
   .navbar .components .link:hover{
@@ -40,10 +40,10 @@
     border-width: 1px;
     border-left: none;
     border-right: none;
-    color: #a3eeee;
+    color: #f3f3f3;
   }
   .navbar .components .link.active{
-    color: #a3eeee;
+    color: #f3f3f3;
    }
   
   @media screen and (max-width: 767px){

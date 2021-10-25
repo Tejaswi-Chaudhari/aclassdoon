@@ -63,7 +63,7 @@ const Cardy = ({ card }) => {
                         <p className="text-muted footer-txt"><a href={`tel:${card.contact_no}`}>Contact Number: {card.contact_no}</a><ButtonMailto label={`Email: ${card.email}`} mailto={`mailto:${card.email}`} /><a href={card.website ? card.website : ''} target="_blank" rel="noreferrer">{card.website ? card.website : ''}</a><br></br> {card.address ? `Address: ${card.address}` : ''}<br></br>{card.owner_name ? `--${card.owner_name}` : ''}<br></br></p>
                     </Modal.Body>
                 </Container>
-                <Button variant="info" onClick={handleClose}>
+                <Button variant="dark" onClick={handleClose}>
                     Close
                 </Button>
             </Modal>
