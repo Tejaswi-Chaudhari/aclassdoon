@@ -37,7 +37,10 @@
     background-color: #000000;
     color: #ffffff;
 }
-
+.in{
+    font-size: 16px;
+    font-weight: 600;
+}
 .footer-txt a{
     color: #000000;
     text-decoration: underline 3px #064d90;
@@ -64,10 +67,14 @@ and (min-device-width: 768px)
 and (max-device-width: 1024px) 
 and (-webkit-min-device-pixel-ratio: 2) {
     .card-img{
-        max-width: 200px;
+        width: 170px;
         height: auto;
         margin: auto;
         display: block;
+    }
+    .in{
+        font-size: 15px;
+        font-weight: 400;
     }
 }
 

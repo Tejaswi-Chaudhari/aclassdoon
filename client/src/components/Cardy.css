@@ -17,7 +17,7 @@ and (min-device-width: 768px)
 and (max-device-width: 1024px) 
 and (-webkit-min-device-pixel-ratio: 2) {
     .car2-img{
-        max-width: 600px;
+        width: 510px;
         height: auto;
     }
     .car2-img-modal{

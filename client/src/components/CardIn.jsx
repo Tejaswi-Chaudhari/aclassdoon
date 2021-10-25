@@ -62,9 +62,9 @@ const CardIn = ({ card }) => {
                             />
                         </Carousel.Item>
                     </Carousel>
-                    <Card.Header as="h5" className="card-h">{card.business_name}</Card.Header>
+                    <Card.Header className="card-h in">{card.business_name}</Card.Header>
                     <center>
-                    <h6 className='vm'>{halfSen}<Button onClick={handleShow} variant="link" className="button-card">View More</Button></h6>
+                    <h6 className='vm'><Button onClick={handleShow} variant="link" className="button-card">View More</Button></h6>
                     </center>
                 </Card>
             </Col>
