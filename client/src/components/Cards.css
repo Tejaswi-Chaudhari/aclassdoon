@@ -2,7 +2,7 @@
     margin-top: 50px;
 }
 .reset-button{
-    margin-left: 690px;
+    margin-left: 100px;
 }
 
 .filter{
@@ -15,8 +15,14 @@
 }
 
 #basic-nav-dropdown{
+    font-size: 23px;
     color: #000000;
-    text-decoration: underline 4px #a3eeee;
+    text-decoration: underline 4px #064d90;
+}
+
+.search{
+    margin-left: 50px;
+    width: 650px;
 }
 
 @media screen and (max-width: 767px){

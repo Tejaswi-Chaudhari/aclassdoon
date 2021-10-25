@@ -149,7 +149,7 @@ const Cards = () => {
                             )}
                             <Button variant='info' onClick={() => filterNow()}>Filter</Button> */}
                             </div>
-                            <input type="text"
+                            <input className='search' type="text"
                                 placeholder='Search...'
                                 onChange={(e) => searchItems(e.target.value)}
                             />
