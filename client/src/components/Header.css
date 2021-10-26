@@ -71,9 +71,6 @@
       font-weight: 50px;
       font-size: 30px;
     }
-    .navbar-toggler-icon{
-      background-color: #000000;
-    }
     .navbar .components .a1{
       margin: auto;
     }
@@ -92,9 +89,6 @@
       width: 40px;
       height: auto;
       margin-left: 20px;
-    }
-    .navbar-toggler-icon{
-      background-color: #000000;
     }
     .navbar .name{
       text-decoration: none;

@@ -7,8 +7,9 @@ const About = () => {
     return (
         <div className="about">
             <center>
-                <Image src={banner} alt="banner" className="about-banner" />
+                <Image src={banner} alt="banner" className="about-banner card" />
             </center>
+            <br></br>
             <p> Ankan The Print People is engaged in the business of printing since 1983 and delivered our esteemed clients with good quality and prompt services which were and are being highly appreciated since its existance. Our primary goal is to keep ourselves updated to cater the needs of our clients and strive for total customer satisfaction. Now we are extending our services as per the new era of requirements.
             </p>
             <br></br>

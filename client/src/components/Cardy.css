@@ -1,6 +1,6 @@
 .car2-img{
-    height: 250px;
-    width: 750px;
+    max-height: 250px;
+    max-width: 750px;
 }
 .card{
     border-color: #c0c0c0;

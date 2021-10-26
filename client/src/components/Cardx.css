@@ -1,6 +1,6 @@
 .car1-img{
-  height: 250px;
-  width: 1000px;
+  max-height: 250px;
+  max-width: 1000px;
 }
 .car1-img-modal{
   height: 200px;

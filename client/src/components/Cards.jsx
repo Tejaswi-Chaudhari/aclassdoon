@@ -130,7 +130,7 @@ const Cards = () => {
 
                 <Container>
                     <center>
-                        <Image src={banner} alt="banner" className="about-banner" />
+                        <Image src={banner} alt="banner" className="about-banner card" />
                     </center>
                     <hr></hr>
                     <br></br>

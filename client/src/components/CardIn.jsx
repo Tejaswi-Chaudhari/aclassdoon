@@ -1,5 +1,5 @@
 import { React, useState } from 'react';
-import { Card, Row, Col, Carousel, Button, Modal, Container, Nav} from 'react-bootstrap';
+import { Card, Col, Carousel, Button, Modal, Container, Nav} from 'react-bootstrap';
 import './CardIn.css'
 
 const CardIn = ({ card }) => {
@@ -7,9 +7,6 @@ const CardIn = ({ card }) => {
 
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
-
-    var desc = card.description;
-    var halfSen = desc.slice(0, 10);
 
     const ButtonMailto = ({ mailto, label }) => {
         return (<>

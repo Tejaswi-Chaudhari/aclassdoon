@@ -30,8 +30,8 @@
     text-align: center;
 }
 .cardimg{
-    height: 250px;
-    width: 250px;
+    max-height: 250px;
+    max-width: 250px;
 }
 .modal-h{
     background-color: #000000;
