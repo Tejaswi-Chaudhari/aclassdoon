@@ -4,10 +4,10 @@
 }
 .contactus{
     margin-left: 50px;
-    text-decoration: underline #064d90;
+    text-decoration: underline #4285F4;
 }
 .contactform{
-    color: #064d90;
+    color: #4285F4;
     margin-bottom: 10px;
 }
 .title{
@@ -20,7 +20,7 @@
     padding-right: 40px;
     padding-bottom: 90px;
     border-radius: 25px;
-    background-color: #000000;
+    background-color: #4285F4;
     color: #ffffff;
     margin-left: 40px;
 }

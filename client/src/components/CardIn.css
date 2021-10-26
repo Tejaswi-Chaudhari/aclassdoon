@@ -12,19 +12,19 @@
 }
 .button-card{
     color: #000000;
-    text-decoration: underline 3px #064d90;
+    text-decoration: underline 3px #4285F4;
 }
 .button-card:hover{
     color: #000000;
-    text-decoration: underline 3px #064d90;
+    text-decoration: underline 3px #4285F4;
 }
 .button-card:visited{
     color: #000000;
-    text-decoration: underline 3px #064d90;
+    text-decoration: underline 3px #4285F4;
 }
 .button-card.active{
     color: #000000;
-    text-decoration: underline 3px #064d90;
+    text-decoration: underline 3px #4285F4;
 }
 .footer-txt{
     text-align: center;
@@ -43,19 +43,19 @@
 }
 .footer-txt a{
     color: #000000;
-    text-decoration: underline 3px #064d90;
+    text-decoration: underline 3px #4285F4;
 }
 .footer-txt a:hover{
     color: #000000;
-    text-decoration: underline 3px #064d90;
+    text-decoration: underline 3px #4285F4;
 }
 .footer-txt a.active{
     color: #000000;
-    text-decoration: underline 3px #064d90;
+    text-decoration: underline 3px #4285F4;
 }
 .footer-txt a:visited{
     color: #000000;
-    text-decoration: underline 3px #064d90;
+    text-decoration: underline 3px #4285F4;
 }
 .vm{
     display: inline-block;

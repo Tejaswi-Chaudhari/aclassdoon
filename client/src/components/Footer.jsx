@@ -6,6 +6,7 @@ import './Footer.css'
 const Footer = () => {
     return (
         <div class='footer'>
+            <hr></hr>
             Developed with <FontAwesomeIcon icon={faHeart} color='red'/> by <a href='https://webminix.co/' target="_blank" rel="noreferrer" className="f-link">WEBMINIX</a>
         </div>
     )

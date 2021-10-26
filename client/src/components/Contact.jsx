@@ -74,7 +74,7 @@ const Contact = () => {
                                 as="textarea" placeholder="Write your message here" />
                         </Form.Group>
 
-                        <Button className="button" variant="dark" type="submit">
+                        <Button className="button" variant="primary" type="submit">
                             Submit
                         </Button>
                     </Form>

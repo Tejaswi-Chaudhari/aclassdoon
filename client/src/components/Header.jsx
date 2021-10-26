@@ -4,7 +4,7 @@ import { LinkContainer } from "react-router-bootstrap";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {faAddressCard, faUsers } from '@fortawesome/free-solid-svg-icons'
 import "./Header.css"
-import img from "../media/logo3.png"
+import img from "../media/Logo.jpg"
 
 
 function Header() {
@@ -30,6 +30,7 @@ function Header() {
                         </Container>
                     </Navbar.Collapse>
                 </Navbar>
+                <hr></hr>
             </>
         </div>
     )

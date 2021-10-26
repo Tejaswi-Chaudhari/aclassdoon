@@ -1,7 +1,7 @@
 import React from 'react';
 import "./about.css"
 import { Image } from 'react-bootstrap';
-import banner from '../media/banner2.png'
+import banner from '../media/Banner.jpg'
 
 const About = () => {
     return (

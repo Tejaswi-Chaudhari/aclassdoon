@@ -7,7 +7,7 @@ import Cardz from './Cardz'
 import Pagination from './Pagination'
 import { Container, Row, Nav, NavDropdown, Col, Button } from 'react-bootstrap';
 import './Cards.css'
-import banner from '../media/banner2.png'
+import banner from '../media/Banner.jpg'
 import { Image } from 'react-bootstrap';
 
 const Cards = () => {

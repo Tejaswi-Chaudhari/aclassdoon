@@ -7,13 +7,13 @@
   .navbar .name{
     text-decoration: none;
     text-align:left;
-    color:#ffffff;
+    color:#000000;
     padding-left: 20px;
     font-weight: 50px;
     font-size: 40px;
   }
   .navbar {
-    background-color: rgb(0, 0, 0);
+    background-color: rgb(255, 255, 255);
     text-decoration: none;
     height:100px;
     font-size:40px;
@@ -21,7 +21,7 @@
   .navbar .components .link {
     font-weight: 500px;
     text-decoration: none;
-    color:#ffffff;
+    color:#000000;
     padding-left: 15px; 
     font-size: 22px;
     padding-right: 25px;
@@ -30,13 +30,13 @@
     margin-left: 400px;
   }
   .navbar .name:hover{
-    color: #f3f3f3;
+    color: #000000;
   }
   .navbar .name.active{
-    color: #f3f3f3;
+    color: #000000;
   }
   .navbar .name:visited{
-    color: #f3f3f3;
+    color: #000000;
   }
   
   .navbar .components .link:hover{
@@ -44,10 +44,10 @@
     border-width: 1px;
     border-left: none;
     border-right: none;
-    color: #f3f3f3;
+    color: #000000;
   }
   .navbar .components .link.active{
-    color: #f3f3f3;
+    color: #000000;
    }
   
    @media only screen 
@@ -66,13 +66,13 @@
     .navbar .name{
       text-decoration: none;
       text-align:left;
-      color:#ffffff;
+      color:#000000;
       padding-left: 10px;
       font-weight: 50px;
       font-size: 30px;
     }
     .navbar-toggler-icon{
-      background-color: #ffffff;
+      background-color: #000000;
     }
     .navbar .components .a1{
       margin: auto;
@@ -94,12 +94,12 @@
       margin-left: 20px;
     }
     .navbar-toggler-icon{
-      background-color: #ffffff;
+      background-color: #000000;
     }
     .navbar .name{
       text-decoration: none;
       text-align:left;
-      color:#ffffff;
+      color:#000000;
       padding-left: 10px;
       font-weight: 50px;
       font-size: 30px;
@@ -116,7 +116,7 @@
     .navbar .name{
       text-decoration: none;
       text-align:left;
-      color:#ffffff;
+      color:#000000;
       padding-left: 10px;
       font-weight: 50px;
       font-size: 20px;

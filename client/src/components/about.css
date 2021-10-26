@@ -11,12 +11,12 @@
 
 .classdoon{
     color: #000000;
-    text-decoration: underline #064d90;
+    text-decoration: underline #4285F4;
 
 }
 
 ul{
-    list-style: circle #064d90;
+    list-style: circle #4285F4;
 }
 
 @media only screen 
