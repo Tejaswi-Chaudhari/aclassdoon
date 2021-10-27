@@ -2,7 +2,7 @@ import React from 'react';
 import { Navbar, Nav, Container, Image } from 'react-bootstrap';
 import { LinkContainer } from "react-router-bootstrap";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import {faAddressCard, faUsers } from '@fortawesome/free-solid-svg-icons'
+import {faAddressCard, faBriefcase, faUsers } from '@fortawesome/free-solid-svg-icons'
 import "./Header.css"
 import img from "../media/Logo.jpg"
 
@@ -20,6 +20,9 @@ function Header() {
                     <Navbar.Collapse id="basic-navbar-nav">
                         <Container>
                             <Nav className="components">
+                                <LinkContainer to="/job">
+                                    <Nav.Link className="link"> <FontAwesomeIcon icon={faBriefcase} /> Job</Nav.Link>
+                                </LinkContainer>
                                 <LinkContainer to="/about">
                                     <Nav.Link className="link a1"><FontAwesomeIcon icon={faUsers} />  About Us</Nav.Link>
                                 </LinkContainer>

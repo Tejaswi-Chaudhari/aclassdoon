@@ -2,7 +2,7 @@ import React from "react";
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.js';
-import { Header, Cards, About, Contact, Footer} from './components';
+import { Header, Cards,Job, About, Contact, Footer} from './components';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 
 
@@ -13,6 +13,11 @@ function App() {
       <Route exact path="/">
         <Header/>
         <Cards />
+        <Footer />
+      </Route>
+      <Route exact path="/job">
+        <Header/>
+        <Job/>
         <Footer />
       </Route>
       <Route exact path="/about">
