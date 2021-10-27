@@ -12,6 +12,9 @@
 .about-banner{
     width: 2500px;
     height: auto;
+    border-color: #c0c0c0;
+    border-width: 1px;
+    box-shadow: 0.5px 0.5px 8px 8px #c0c0c0;
 }
 
 #basic-nav-dropdown{

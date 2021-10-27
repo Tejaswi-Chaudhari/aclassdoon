@@ -6,6 +6,9 @@ import banner from '../media/Banner.jpg'
 const About = () => {
     return (
         <div className="about">
+            <br></br>
+            <br></br>
+            <br></br>
             <center>
                 <Image src={banner} alt="banner" className="about-banner card" />
             </center>

@@ -32,6 +32,9 @@ const Contact = () => {
     return (
 
         <div className="title">
+            <br></br>
+            <br></br>
+            <br></br>
             <h1 className="contactus display-6">Contact Us</h1>
             <hr></hr>
 

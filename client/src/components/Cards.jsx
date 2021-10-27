@@ -127,10 +127,11 @@ const Cards = () => {
     return (
         <div>
             <div className='card-start'>
-
+                <br></br>
+                <br></br>
                 <Container>
                     <center>
-                        <Image src={banner} alt="banner" className="about-banner card" />
+                        <Image src={banner} alt="banner" className="about-banner" />
                     </center>
                     <hr></hr>
                     <br></br>

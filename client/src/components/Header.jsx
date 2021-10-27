@@ -11,7 +11,7 @@ function Header() {
     return (
         <div>
             <>
-                <Navbar expand="lg" className="navbar">
+                <Navbar expand="lg" className="navbar" fixed="top">
                     <Image src={img} alt="brand-logo" className="nav-logo" />
                     <LinkContainer to="/">
                         <Navbar.Brand className="name display-6"><b>A Class Doon</b></Navbar.Brand>

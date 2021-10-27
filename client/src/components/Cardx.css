@@ -26,7 +26,7 @@ and (-webkit-min-device-pixel-ratio: 2) {
 
 @media screen and (max-width: 767px){
   .car1-img{
-      max-width: 280px;
+      max-width: 330px;
       height: auto;
   }
   .car1-img-modal{
