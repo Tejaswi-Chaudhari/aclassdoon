@@ -192,7 +192,7 @@ const Job = () => {
                         }
                     </Row>
                 </Container>
-                <Pagination JobsPerPage={JobsPerPage} totalJobs={Jobs.length} paginate={paginate} />
+                <Pagination cardsPerPage={JobsPerPage} totalCards={Jobs.length} paginate={paginate} />
             </div>
         </div>
     )
