@@ -21,10 +21,10 @@ function Header() {
                         <Container>
                             <Nav className="components">
                                 <LinkContainer to="/job">
-                                    <Nav.Link className="link"> <FontAwesomeIcon icon={faBriefcase} /> Job</Nav.Link>
+                                    <Nav.Link className="link a1"> <FontAwesomeIcon icon={faBriefcase} /> Jobs/Vacancy</Nav.Link>
                                 </LinkContainer>
                                 <LinkContainer to="/about">
-                                    <Nav.Link className="link a1"><FontAwesomeIcon icon={faUsers} />  About Us</Nav.Link>
+                                    <Nav.Link className="link"><FontAwesomeIcon icon={faUsers} />  About Us</Nav.Link>
                                 </LinkContainer>
                                 <LinkContainer to="/contact">
                                     <Nav.Link className="link"> <FontAwesomeIcon icon={faAddressCard} />  Contact Us</Nav.Link>
