@@ -4,6 +4,7 @@
 } */
 .card-img{
     height: 250px;
+    width: auto;
 }
 .card-h{
     background-color: #000000;
