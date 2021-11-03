@@ -46,6 +46,7 @@ const CardIn = ({ card }) => {
                 <Card className="card-in">
                     <br></br>
                     {/* <Card.Img className="card-img" variant="top" src={`https://aclassdoon.pythonanywhere.com${card.thumbnail}`} /> */}
+                    <center>
                     <Carousel fade nextLabel="" prevLabel="">
                         <Carousel.Item>
                             <img
@@ -76,6 +77,7 @@ const CardIn = ({ card }) => {
                             />
                         </Carousel.Item>
                     </Carousel>
+                    </center>
                     <Card.Header className="card-h in">{card.business_name}</Card.Header>
                     <center>
                     <h6 className='vm'><Button onClick={handleShow} variant="link" className="button-card">View More</Button></h6>
