@@ -8,7 +8,24 @@ const Jobx = ({ job }) => {
     const [show, setShow] = useState(false);
 
     const handleClose = () => setShow(false);
-    const handleShow = () => setShow(true);
+    const handleShow = () => {
+        setShow(true);
+        let location = job.job_location;
+        for (let i = 0; i < 21; i++) {
+            console.log(location, typeof (location));
+            location = location.replace(' ', '%20');
+        }
+        console.log(location)
+        for (let i = 0; i < 26; i++) {
+            console.log(location, typeof (location));
+            location = location.replace(',', '%2C');
+        }
+        console.log(location)
+        localStorage.setItem('Jobloc', location)
+    }
+
+    const loc = localStorage.getItem('Jobloc')
+    console.log('loc', loc)
 
     var desc = job.company_description;
     var halfSen = desc.slice(0, 25);
@@ -67,6 +84,7 @@ const Jobx = ({ job }) => {
                     <p className="text-muted footer-txt"><a href={`tel:${job.contact}`}>Contact Number: {job.contact}</a><ButtonMailto label={`Email: ${job.email_id}`} mailto={`mailto:${job.email_id}`} /><a href={job.company_website ? job.company_website : ''} target="_blank" rel="noreferrer">{job.company_website ? job.company_website : ''}</a><br></br> {job.job_location ? `Job Location: ${job.job_location}` : ''}<br></br>{job.posted_by ? `--${job.posted_by}` : ''}<br></br></p>
                 </Modal.Body>
                 </Container>
+                <iframe title="Google-map" src={`https://www.google.com/maps/embed/v1/place?key=AIzaSyBVRQDsh2i4d_UBD4ut_Ah2U7jLCy7IyFU&q=${loc}`}></iframe>
                 <Button variant="dark" onClick={handleClose}>
                     Close
                 </Button>

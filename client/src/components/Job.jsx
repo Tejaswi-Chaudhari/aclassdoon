@@ -31,7 +31,6 @@ const Job = () => {
         if (searchInput !== '') {
             const filteredData = Jobs.filter((item) => {
                 return Object.values(item).join('').toLowerCase().includes(searchInput.toLowerCase())
-
             })
             setJobs(filteredData)
             console.log(filteredData)
@@ -192,7 +191,7 @@ const Job = () => {
                         }
                     </Row>
                 </Container>
-                <Pagination JobsPerPage={JobsPerPage} totalJobs={Jobs.length} paginate={paginate} />
+                <Pagination cardsPerPage={JobsPerPage} totalCards={Jobs.length} paginate={paginate} />
             </div>
         </div>
     )

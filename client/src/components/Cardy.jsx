@@ -8,7 +8,24 @@ const Cardy = ({ card }) => {
     const [show, setShow] = useState(false);
 
     const handleClose = () => setShow(false);
-    const handleShow = () => setShow(true);
+    const handleShow = () => {
+        setShow(true);
+        let location = card.address;
+        for (let i = 0; i < 21; i++) {
+            console.log(location, typeof (location));
+            location = location.replace(' ', '%20');
+        }
+        console.log(location)
+        for (let i = 0; i < 26; i++) {
+            console.log(location, typeof (location));
+            location = location.replace(',', '%2C');
+        }
+        console.log(location)
+        localStorage.setItem('Adloc', location)
+    }
+
+    const loc = localStorage.getItem('Adloc')
+    console.log('loc', loc)
 
     var desc = card.description;
     var halfSen = desc.slice(0, 18);
@@ -66,6 +83,7 @@ const Cardy = ({ card }) => {
                         <p className="text-muted footer-txt"><a href={`tel:${card.contact_no}`}>Contact Number: {card.contact_no}</a><ButtonMailto label={`Email: ${card.email}`} mailto={`mailto:${card.email}`} /><a href={card.website ? card.website : ''} target="_blank" rel="noreferrer">{card.website ? card.website : ''}</a><br></br> {card.address ? `Address: ${card.address}` : ''}<br></br>{card.owner_name ? `--${card.owner_name}` : ''}<br></br></p>
                     </Modal.Body>
                 </Container>
+                <iframe title="Google-map" src={`https://www.google.com/maps/embed/v1/place?key=AIzaSyBVRQDsh2i4d_UBD4ut_Ah2U7jLCy7IyFU&q=${loc}`}></iframe>
                 <Button variant="dark" onClick={handleClose}>
                     Close
                 </Button>
