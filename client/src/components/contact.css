@@ -10,6 +10,13 @@
     color: #4285F4;
     margin-bottom: 10px;
 }
+.contact-red{
+    color: #ffffff;
+    display: inline-block;
+}
+.contact-red:hover{
+    color: #ffffff;
+}
 .title{
     padding-top: 20px;
 }

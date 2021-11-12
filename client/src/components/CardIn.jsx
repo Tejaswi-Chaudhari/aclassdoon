@@ -139,7 +139,7 @@ const CardIn = ({ card }) => {
                 </Modal.Body>
                 </Container>
                 <iframe title="Google-map" src={`https://www.google.com/maps/embed/v1/place?key=AIzaSyBVRQDsh2i4d_UBD4ut_Ah2U7jLCy7IyFU&q=${loc}`}></iframe>
-                <Button variant="info" onClick={handleClose}>
+                <Button variant="dark" onClick={handleClose}>
                     Close
                 </Button>
             </Modal>

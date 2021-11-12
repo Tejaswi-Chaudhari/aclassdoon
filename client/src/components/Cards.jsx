@@ -127,14 +127,14 @@ const Cards = () => {
     return (
         <div>
             <div className='card-start'>
-                <br></br>
-                <br></br>
+                <br className='responsive'></br>
+                <br className='responsive'></br>
                 <Container>
                     <center>
                         <Image src={banner} alt="banner" className="about-banner" />
                     </center>
                     <hr></hr>
-                    <br></br>
+                    <br className='responsive'></br>
                     <Nav>
                         <NavDropdown title="Filter by Category" id="basic-nav-dropdown" >
                             {uniqueArr.map((item) =>

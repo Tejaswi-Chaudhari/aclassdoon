@@ -1,7 +1,7 @@
 import React from 'react'
 import { useState } from 'react';
 import axios from 'axios';
-import { Form, Button, Row, Col } from 'react-bootstrap';
+import { Form, Button, Row, Col, Nav } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faEnvelope, faMapMarkerAlt, faPhoneAlt } from '@fortawesome/free-solid-svg-icons'
 
@@ -29,6 +29,24 @@ const Contact = () => {
             message: '',
         })
     }
+
+    const ButtonMailto = ({ mailto, label }) => {
+        return (<>
+            <FontAwesomeIcon className='icon-contact' icon={faEnvelope} />
+            <Nav.Link
+                className='contact-red'
+                to='#'
+                onClick={(e) => {
+                    window.location = mailto;
+                    e.preventDefault();
+                }}
+            >
+                {label}
+            </Nav.Link>
+            </>
+        );
+    };
+
     return (
 
         <div className="title">
@@ -43,9 +61,10 @@ const Contact = () => {
                     <div className="box">
                         <h3 classname="display-6">Get in Touch</h3>
                         <br></br>
-                        <p classname="box-t"><FontAwesomeIcon className='icon-contact' icon={faMapMarkerAlt} /> xyz, Mumbai, Maharashtra</p>
-                        <p classname="box-t"><FontAwesomeIcon className='icon-contact' icon={faPhoneAlt} /> +9999999999</p>
-                        <p classname="box-t"><FontAwesomeIcon className='icon-contact' icon={faEnvelope} /> abc@gmail.com</p>
+                        {/* <iframe title="Google-map" src={`https://www.google.com/maps/embed/v1/place?key=AIzaSyBVRQDsh2i4d_UBD4ut_Ah2U7jLCy7IyFU&q=34%2c%20Karanpur%2c%20Dehradun%2c%20Uttarakhand%2c%20India`}></iframe> */}
+                        <p classname="box-t"><FontAwesomeIcon className='icon-contact' icon={faMapMarkerAlt} /> 34, Karanpur, Dehradun, Uttarakhand, India</p>
+                        <p classname="box-t"><FontAwesomeIcon className='icon-contact' icon={faPhoneAlt} /><a className='contact-red' href={`tel:+916397211676`}> +916397211676</a></p>
+                        <p classname="box-t"><ButtonMailto label={`aclassdoon@gmail.com`} mailto={`mailto:aclassdoon@gmail.com`} className='contact-red' /></p>
                     </div>
                 </Col>
                 <Col lg={8} md={12} sm={12} xs={12} className='right'>

@@ -56,7 +56,17 @@
 @media screen and (max-width: 767px){
     .about-banner{
         max-width: 320px;
-        margin: auto;
+        height: auto;
+        margin-top: auto;
+        margin-bottom: auto;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .responsive{
+        display: none;
+    }
+    .filter{
+        margin-top: 0;
     }
     .reset-button{
         margin-left: 40px;
