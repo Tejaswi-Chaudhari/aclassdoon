@@ -10,6 +10,8 @@
 }
 
 .about-banner{
+    margin-top: 0px;
+    margin-bottom: 0px;
     width: 2500px;
     height: auto;
     border-color: #c0c0c0;
@@ -56,7 +58,8 @@
 @media screen and (max-width: 767px){
     .about-banner{
         max-width: 320px;
-        margin: auto;
+        margin-top: 10px;
+        margin-bottom: 10px;
     }
     .reset-button{
         margin-left: 40px;

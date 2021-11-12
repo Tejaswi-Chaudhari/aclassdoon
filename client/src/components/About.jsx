@@ -29,6 +29,9 @@ const About = () => {
                 <li>Video Advertising and Promotion</li>
             </ul>
             <br></br>
+            <p className="disclaimer">Disclaimer</p><p>A Class Doon, is a Digital Advertisement Agency, which collects advertisements and vacancies from business owners, office representatives, and individuals etc. A Class Doon do not create advertisement or vacancy of its own, it is purely provided by the customer,  so A Class Doon do not take onus or any kind responsibility of any false/Manipulated information intentionally/unintentionally in the advertisement/vacancy.
+            A Class Doon always take special care to keep website up and fast but if in any case if website is anytime slow or not up, that may be only due to technical reason and not from our side.
+            All judicial matter will be subjected to dehradun only.</p>
         </div>
     )
 }
