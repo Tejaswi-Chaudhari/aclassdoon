@@ -21,6 +21,10 @@
     padding-top: 20px;
 }
 
+.icon-c{
+    margin-right: 10px;
+}
+
 .box{
     padding-top: 40px;
     padding-left: 40px;
@@ -35,9 +39,6 @@
 .box-t{
     font-size: bold;
     font-weight: 20px;
-}
-.icon-contact{
-    margin-right: 5px;
 }
 
 @media only screen 

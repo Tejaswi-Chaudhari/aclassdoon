@@ -18,8 +18,11 @@ ul{
 }
 
 .disclaimer{
+    color: #000000;
+    text-decoration: underline #4285F4;
     font-style: italic;
     font-weight: bold;
+    font-size: 22px;
 }
 
 @media only screen 

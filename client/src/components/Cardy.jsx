@@ -55,7 +55,9 @@ const Cardy = ({ card }) => {
                         <div><img className="car2-img" src={`https://aclassdoon.pythonanywhere.com${card.thumbnail}`} alt="slide" /></div>
                     </center>
                     <Card.Header as="h5" className="card-h">{card.business_name}</Card.Header>
+                    <center>
                     <h6 className='vm'>{halfSen}<Button onClick={handleShow} variant="link" className="button-card">View More</Button></h6>
+                    </center>
                 </Card>
             </Col>
             <br></br>

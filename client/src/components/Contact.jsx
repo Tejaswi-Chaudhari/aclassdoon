@@ -62,8 +62,8 @@ const Contact = () => {
                         <h3 classname="display-6">Get in Touch</h3>
                         <br></br>
                         {/* <iframe title="Google-map" src={`https://www.google.com/maps/embed/v1/place?key=AIzaSyBVRQDsh2i4d_UBD4ut_Ah2U7jLCy7IyFU&q=34%2c%20Karanpur%2c%20Dehradun%2c%20Uttarakhand%2c%20India`}></iframe> */}
-                        <p classname="box-t"><FontAwesomeIcon className='icon-contact' icon={faMapMarkerAlt} /> 34, Karanpur, Dehradun, Uttarakhand, India</p>
-                        <p classname="box-t"><FontAwesomeIcon className='icon-contact' icon={faPhoneAlt} /><a className='contact-red' href={`tel:+916397211676`}> +916397211676</a></p>
+                        <p classname="box-t"><FontAwesomeIcon className='icon-c' icon={faMapMarkerAlt} /> 34, Karanpur, Dehradun, Uttarakhand, India</p>
+                        <p classname="box-t"><FontAwesomeIcon className='icon-c' icon={faPhoneAlt} /><a className='contact-red' href={`tel:+916397211676`}> +916397211676</a></p>
                         <p classname="box-t"><ButtonMailto label={`aclassdoon@gmail.com`} mailto={`mailto:aclassdoon@gmail.com`} className='contact-red' /></p>
                     </div>
                 </Col>
@@ -92,7 +92,7 @@ const Contact = () => {
 
                         <Form.Group className="mb-3" controlId="formGridAddress1">
                             <Form.Label>Message</Form.Label>
-                            <Form.Control onChange={e => onInputChange(e)} value={user.message} name="message" rows={3}
+                            <Form.Control onChange={e => onInputChange(e)} value={user.message} name="message" rows={5}
                                 as="textarea" placeholder="Write your message here" />
                         </Form.Group>
 
