@@ -11,11 +11,15 @@
 .classdoon{
     color: #000000;
     text-decoration: underline #4285F4;
-
 }
 
 ul{
     list-style: circle #4285F4;
+}
+
+.disclaimer{
+    font-style: italic;
+    font-weight: bold;
 }
 
 @media only screen 

@@ -7,6 +7,7 @@ const Footer = () => {
     return (
         <div class='footer'>
             <hr></hr>
+            <p><FontAwesomeIcon/></p>
             Developed with <FontAwesomeIcon icon={faHeart} color='red'/> by <a href='https://webminix.com/' target="_blank" rel="noreferrer" className="f-link">WEBMINIX</a>
         </div>
     )

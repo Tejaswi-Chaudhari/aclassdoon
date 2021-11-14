@@ -10,6 +10,8 @@
 }
 
 .about-banner{
+    margin-top: 0px;
+    margin-bottom: 0px;
     width: 2500px;
     height: auto;
     border-color: #c0c0c0;

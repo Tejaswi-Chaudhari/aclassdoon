@@ -81,8 +81,10 @@ const Jobz = ({ job }) => {
                     <h6>Category: {job.job_category}</h6>
                     <h6>{job.company_description}</h6>
                     <h6>{job.job_description}</h6>
-                    <p className="text-muted footer-txt"><a href={`tel:${job.contact}`}>Contact Number: {job.contact}</a><ButtonMailto label={`Email: ${job.email_id}`} mailto={`mailto:${job.email_id}`} /><a href={job.company_website ? job.company_website : ''} target="_blank" rel="noreferrer">{job.company_website ? job.company_website : ''}</a><br></br> {job.job_location ? `Job Location: ${job.job_location}` : ''}<br></br>{job.posted_by ? `--${job.posted_by}` : ''}<br></br></p>
-                </Modal.Body>
+                    <p className="text-muted footer-txt"><a style={{ display: job.contact ? '' : 'none' }} href={`tel:${job.contact}`}>Contact Number: {job.contact}</a>
+                    <a style={{ display: job.contact_1 ? '' : 'none' }} href={`tel:${job.contact_1}`}>Contact Number: {job.contact_1}</a>
+                    <a style={{ display: job.contact_2 ? '' : 'none' }} href={`tel:${job.contact_2}`}>Contact Number: {job.contact_2}</a>
+                    <text style={{ display: job.email_id ? '' : 'none' }}><ButtonMailto label={`Email: ${job.email_id}`} mailto={`mailto:${job.email_id}`} /></text><a href={job.company_website ? job.company_website : ''} target="_blank" rel="noreferrer">{job.company_website ? job.company_website : ''}</a><br></br><br></br> {job.job_location ? `Job Location: ${job.job_location}` : ''}<br></br>{job.posted_by ? `--${job.posted_by}` : ''}<br></br></p>                </Modal.Body>
                 </Container>
                 <iframe title="Google-map" src={`https://www.google.com/maps/embed/v1/place?key=AIzaSyBVRQDsh2i4d_UBD4ut_Ah2U7jLCy7IyFU&q=${loc}`}></iframe>
                 <Button variant="dark" onClick={handleClose}>
