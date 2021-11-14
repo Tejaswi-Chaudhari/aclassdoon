@@ -207,6 +207,14 @@ const Cards = () => {
                                 </Row>
                             </center>
                         </div>
+                        <Row lg={4} md={4}>
+                            {
+                                sp42 ?
+                                    sp42.map((item) =>
+                                        <Card key={item.id} card={item} />
+                                    ) : null
+                            }
+                        </Row>
                         <div>
                             <Col lg={6} md={6}>
                                 {
@@ -217,14 +225,6 @@ const Cards = () => {
 
                                 } </Col>
                         </div>
-                        <Row lg={4} md={4}>
-                            {
-                                sp42 ?
-                                    sp42.map((item) =>
-                                        <Card key={item.id} card={item} />
-                                    ) : null
-                            }
-                        </Row>
                 </Container>
                     <Pagination cardsPerPage={cardsPerPage} totalCards={cards.length} paginate={paginate} />
             </div>
