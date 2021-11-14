@@ -1,6 +1,6 @@
 .car2-img{
-    max-height: 250px;
-    max-width: 750px;
+    height: 250px;
+    width: 750px;
 }
 .card{
     border-color: #c0c0c0;
@@ -28,7 +28,7 @@ and (-webkit-min-device-pixel-ratio: 2) {
 
 @media screen and (max-width: 767px){
     .car2-img{
-        max-width: 330px;
+        max-width: 250px;
         height: auto;
     }
     .car2-img-modal{

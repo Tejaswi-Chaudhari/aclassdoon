@@ -1,8 +1,4 @@
-/* .card-in{
-    width: 250px;
-    border-color: #a3eeee;
-} */
-.card-img{
+.card-in .card-img{
     height: 250px;
     width: 250px;
 }
@@ -68,8 +64,8 @@ and (min-device-width: 768px)
 and (max-device-width: 1024px) 
 and (-webkit-min-device-pixel-ratio: 2) {
     .card-img{
-        width: 155px;
-        height: auto;
+        width: 150px;
+        height: 150px;
         margin-left: auto;
         margin-right: auto;
         display: block;
@@ -86,10 +82,10 @@ and (-webkit-min-device-pixel-ratio: 2) {
         margin-right: auto;
     }
     .card-img{
+        width: 150px !important;
+        height: 150px !important;
         margin-left: auto;
         margin-right: auto;
         display: block;
-        max-width: 150px;
-        height: auto;
     }
 }
