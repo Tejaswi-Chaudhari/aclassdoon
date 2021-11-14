@@ -64,8 +64,8 @@ and (min-device-width: 768px)
 and (max-device-width: 1024px) 
 and (-webkit-min-device-pixel-ratio: 2) {
     .card-img{
-        width: 150px;
-        height: 150px;
+        width: 150px !important;
+        height: 150px !important;
         margin-left: auto;
         margin-right: auto;
         display: block;
