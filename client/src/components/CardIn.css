@@ -58,6 +58,12 @@
     display: inline-block;
     margin: 0;
 }
+.button-card{
+    margin-left: -10px;
+}
+.modal-h{
+    margin-bottom: 20px;
+}
 
 @media only screen 
 and (min-device-width: 768px) 
@@ -77,13 +83,25 @@ and (-webkit-min-device-pixel-ratio: 2) {
 }
 
 @media screen and (max-width: 767px){
+    .card-h{
+        font-size: 6px;
+    }
+    .in{
+        font-size: 5px;
+    }
+    .vm{
+        font-size: 6px;
+    }
+    .button-card{
+        font-size: 5px;
+    }
     .card-in{
         margin-left: auto;
         margin-right: auto;
     }
     .card-img{
-        width: 150px !important;
-        height: 150px !important;
+        width: 70px !important;
+        height: 70px !important;
         margin-left: auto;
         margin-right: auto;
         display: block;

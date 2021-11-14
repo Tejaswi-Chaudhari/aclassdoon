@@ -44,7 +44,6 @@ const JobIn = ({ job }) => {
         <div>
             <Col lg={12}>
                 <Card className="card-in">
-                    <br></br>
                     {/* <Card.Img className="card-img" variant="top" src={`https://aclassdoon.pythonanywhere.com${card.thumbnail}`} /> */}
                     <Card.Img
                         className="card-img"

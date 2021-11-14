@@ -12,7 +12,7 @@ const Job = () => {
 
     const [Jobs, setJobs] = useState([]);
     const [currentPage, setCurrentPage] = useState(1);
-    const [JobsPerPage] = useState(25);
+    const [JobsPerPage] = useState(50);
     const [reset, setReset] = useState(false);
     const [searchInput, setSearchInput] = useState('');
 
@@ -138,12 +138,12 @@ const Job = () => {
                     <div>
                         <center>
                             <Row>
-                                <Col lg={9} md={9}>
+                                <Col lg={9} md={9} sm={8} xs={8}>
                                     {Jobsp2.map((item) =>
                                         <Joby key={item.id} job={item} />
                                     )}
                                 </Col>
-                                <Col lg={3} md={3}>
+                                <Col lg={3} md={3} sm={4} xs={4}>
                                     {
                                         sp41 ?
                                             sp41.map((item) =>
@@ -157,12 +157,12 @@ const Job = () => {
                     <div>
                         <center>
                             <Row>
-                                <Col lg={6} md={6}>
+                                <Col lg={6} md={6} sm={6} xs={6}>
                                     {sp31.map((item) =>
                                         <Jobz key={item.id} job={item} />
                                     )}
                                 </Col>
-                                <Col lg={6} md={6}>
+                                <Col lg={6} md={6} sm={6} xs={6}>
                                     {
                                         sp32.map((item) =>
                                             <Jobz key={item.id} job={item} />
@@ -173,7 +173,7 @@ const Job = () => {
                         </center>
                     </div>
                     <div>
-                        <Col lg={6} md={6}>
+                        <Col lg={6} md={6} sm={6} xs={6}>
                             {
                                 sp33 ?
                                     sp33.map((item) =>
@@ -182,7 +182,7 @@ const Job = () => {
 
                             } </Col>
                     </div>
-                    <Row lg={4} md={4}>
+                    <Row lg={4} md={4} sm={3} xs={3}>
                         {
                             sp42 ?
                                 sp42.map((item) =>

@@ -28,7 +28,7 @@ const Cardy = ({ card }) => {
     console.log('loc', loc)
 
     var desc = card.description;
-    var halfSen = desc.slice(0, 18);
+    var halfSen = desc.slice(0, 50);
 
     const ButtonMailto = ({ mailto, label }) => {
         return (<>
@@ -50,8 +50,7 @@ const Cardy = ({ card }) => {
 
             <Col lg={12}>
                 <Card className="car-2">
-                    <center>
-                    <br></br>                   
+                    <center>                   
                         <div><img className="car2-img" src={`https://aclassdoon.pythonanywhere.com${card.thumbnail}`} alt="slide" /></div>
                     </center>
                     <Card.Header as="h5" className="card-h">{card.business_name}</Card.Header>

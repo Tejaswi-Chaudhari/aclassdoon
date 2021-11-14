@@ -49,8 +49,7 @@ const Jobz = ({ job }) => {
 
             <Col>
                 <Card className="car-3">
-                    <center>
-                    <br></br>                   
+                    <center>               
                         <div><img className="car3-img" src={`https://aclassdoon.pythonanywhere.com${job.img}`} alt="slide" /></div>
                     </center>
                     <Card.Header as="h5" className="card-h">{job.company_name}</Card.Header>

@@ -28,7 +28,7 @@ const Jobx = ({ job }) => {
     console.log('loc', loc)
 
     var desc = job.company_description;
-    var halfSen = desc.slice(0, 25);
+    var halfSen = desc.slice(0, 100);
 
     const ButtonMailto = ({ mailto, label }) => {
         return (<>
@@ -50,7 +50,6 @@ const Jobx = ({ job }) => {
 
             <Col lg={12}>
                 <Card className="car-1">
-                    <br></br>
                     <center>
                         <div><img className="car1-img" src={`https://aclassdoon.pythonanywhere.com${job.img}`} alt="slide" /></div>
                     
